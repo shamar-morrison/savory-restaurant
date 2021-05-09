@@ -1,0 +1,11 @@
+// BOOTSTRAP
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+// CUSTOM SCSS
+@import 'animations';
+@import 'colors';
+@import 'scrollbars';
+@import 'variables';
+@import 'mixins';
+@import 'base';

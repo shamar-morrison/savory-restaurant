@@ -1,0 +1,21 @@
+{
+	"name": "savory-restaurant",
+	"version": "1.0.0",
+	"description": "A healthy and eco-friendly resturant for the entire family",
+	"main": "index.html",
+	"scripts": {},
+	"keywords": [],
+	"author": "Shamar Morrison",
+	"license": "ISC",
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not op_mini all"
+	],
+	"devDependencies": {
+		"sass": "^1.32.12"
+	},
+	"dependencies": {
+		"bootstrap": "^5.0.0"
+	}
+}

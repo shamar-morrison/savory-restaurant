@@ -1,0 +1,13 @@
+@mixin shadow($sx: 0.95, $top: 10px) {
+	content: '';
+	position: absolute;
+	top: $top;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	transform: scaleX($sx);
+	background-color: #fff;
+	opacity: 0.15;
+	border-radius: inherit;
+	z-index: -1;
+}
