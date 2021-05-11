@@ -56,6 +56,34 @@
 			</div>
 		</header>
 
+		<!-- RESERVATION MODAL -->
+		<div id="modal" class="modal">
+			<span class="modal-overlay"></span>
+			<div class="modal-content">
+				<h3 class="modal-content--title">Table Reservation</h3>
+				<form class="modal-content--form">
+					<div class="flex-row">
+						<input type="text" name="first-name" placeholder="First Name" />
+						<input type="text" name="last-name" placeholder="Last Name" />
+						<input type="number" name="phone" placeholder="Tel. Num" />
+					</div>
+
+					<div class="flex-row">
+						<select name="Persons" placeholder="No. Persons">
+							<option value="1 Person">1 Person</option>
+							<option value="2 Person">2 Persons</option>
+							<option value="3 Person">3 Persons</option>
+							<option value="4 Person">4 Persons</option>
+							<option value="5 Person">5 Persons</option>
+							<option value="6 or more Persons">6 or more Persons</option>
+						</select>
+						<input type="text" name="last-name" placeholder="Last Name" />
+						<input type="number" name="phone" placeholder="Tel. Num" />
+					</div>
+				</form>
+			</div>
+		</div>
+
 		<!-- SECTION CONTAINER -->
 		<section class="section__container">
 			<span class="scroll-icon-bg">
@@ -271,15 +299,73 @@
 
 				<!-- OPENING HOURS -->
 				<section id="opening-hours" class="opening-hours">
-					<div class="opening-hours--content">
-						<div class="opening-hours--img">
-							<img src="./src/img/opening-hours.jpg" alt="opening hours image" />
+					<span class="white-bg"></span>
+					<div class="row">
+						<!-- IMAGE -->
+						<div class="col-lg-8">
+							<div class="opening-hours--img">
+								<span class="overlay"></span>
+								<div class="opening-hours--content">
+									<p class="hero__content--intro-left">our hours</p>
+									<h3 class="opening-hours--title">Opening Hours</h3>
+									<p class="opening-hours--msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nihil!</p>
+								</div>
+
+								<div class="dual-btns text-white">
+									<a href="#" class="btn btn-lg btn-shadow" role="button">reservation</a>
+									<a href="#" class="btn btn-lg" role="button">contact us</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- DAYS / HOURS -->
+						<div class="col-lg-4">
+							<div class="opening-hours--time">
+								<ul class="days-hours">
+									<li>
+										<p class="day">monday to friday</p>
+										<h3 class="time">05 : 00</h3>
+										<h3 class="time">17 : 30</h3>
+									</li>
+
+									<li>
+										<p class="day">saturday to sunday</p>
+										<h3 class="time">10 : 00</h3>
+										<h3 class="time">14 : 00</h3>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- MOBILE APP -->
+				<section id="mobile-app" class="section__no-bg">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="content__no-bg">
+									<p class="hero__content--intro-left">mobile application</p>
+									<h3 class="content__no-bg--title">Download our mobile app</h3>
+									<p class="content__no-bg--msg">
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, incidunt.
+									</p>
+
+									<div class="dual-btns text-white">
+										<a href="#" class="btn btn-lg btn-shadow" role="button"
+											><i class="fab fa-google-play"></i>playstore</a
+										>
+										<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
 			</div>
 			<!-- /.container -->
 		</section>
+		<!-- /.section__container -->
 	</body>
 	<!-- CUSTOM JS -->
 	<script src="./src/js/index.js"></script>
