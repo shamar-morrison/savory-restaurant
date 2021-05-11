@@ -10,3 +10,13 @@
 ::-webkit-scrollbar-track {
 	background: #000;
 }
+
+::selection {
+	color: #fff;
+	background: $clr-primary;
+}
+
+::-moz-selection {
+	color: #fff;
+	background: $clr-primary;
+}
