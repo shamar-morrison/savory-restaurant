@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 		<!-- CUSTOM STYLESHEET -->
 		<link rel="stylesheet" href="./src/css/index.min.css" />
-		<title>Document</title>
+		<title>Savory Restaurant</title>
 	</head>
 	<body>
 		<div class="bg-overlay"></div>
@@ -29,7 +29,7 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<!-- RESERVATION BTN -->
-				<button class="btn btn-lg reserve-btn">reservation</button>
+				<button class="btn btn-lg btn-reserve">reservation</button>
 			</nav>
 		</div>
 
@@ -47,7 +47,7 @@
 								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo vel, ullam perspiciatis fugit dolor.
 							</p>
 							<div class="hero__content--btns grid">
-								<button class="btn btn-lg btn-shadow">reservation</button>
+								<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
 								<button class="btn btn-lg btn-trans">view menu</button>
 							</div>
 						</div>
@@ -58,17 +58,20 @@
 
 		<!-- RESERVATION MODAL -->
 		<div id="modal" class="modal">
+			<!-- MODAL OVERLAY -->
 			<span class="modal-overlay"></span>
+			<!-- MODAL BODY -->
 			<div class="modal-content">
+				<span class="close-modal"><i class="fas fa-times-circle"></i></span>
 				<h3 class="modal-content--title">Table Reservation</h3>
 				<form class="modal-content--form">
-					<div class="flex-row">
+					<div class="form-row">
 						<input type="text" name="first-name" placeholder="First Name" />
 						<input type="text" name="last-name" placeholder="Last Name" />
 						<input type="number" name="phone" placeholder="Tel. Num" />
 					</div>
 
-					<div class="flex-row">
+					<div class="form-row">
 						<select name="Persons" placeholder="No. Persons">
 							<option value="1 Person">1 Person</option>
 							<option value="2 Person">2 Persons</option>
@@ -77,9 +80,14 @@
 							<option value="5 Person">5 Persons</option>
 							<option value="6 or more Persons">6 or more Persons</option>
 						</select>
-						<input type="text" name="last-name" placeholder="Last Name" />
-						<input type="number" name="phone" placeholder="Tel. Num" />
+
+						<input type="date" name="date" placeholder="Date" />
+						<input type="time" name="time" />
 					</div>
+					<!-- MESSAGE -->
+					<textarea name="message" id="reservation-msg" placeholder="Write a message..." rows="3"></textarea>
+					<!-- BUTTON -->
+					<button class="btn btn-lg reserve-table">reserve a table</button>
 				</form>
 			</div>
 		</div>
@@ -93,14 +101,14 @@
 				<!-- ABOUT -->
 				<section id="about">
 					<div class="row gx-5">
-						<div class="col-md-6">
+						<div class="col-lg-6">
 							<!-- ABOUT IMG -->
 							<div class="about-img">
 								<img src="./src/img/about.jpg" alt="restaurant image" />
 							</div>
 						</div>
 						<!-- ABOUT CONTENT -->
-						<div class="col-md-6">
+						<div class="col-lg-6">
 							<div class="about__content">
 								<p class="hero__content--intro-left">about us</p>
 								<h1 class="about__content--title">We invite you to visit our restaurant</h1>
@@ -194,7 +202,7 @@
 						<!-- CARD 1 -->
 						<div class="col-lg-4">
 							<div class="card__content">
-								<div class="card__content--img"><img src="./src/img/chef-1.jpg" alt="" /></div>
+								<div class="card__content--img"><img src="./src/img/chef-1.jpg" alt="chef" /></div>
 								<h3 class="card__content--title">Kevin James</h3>
 								<p class="card__content--subtitle separate">Pastry Chef</p>
 
@@ -217,7 +225,7 @@
 						<!-- CARD 2 -->
 						<div class="col-lg-4">
 							<div class="card__content">
-								<div class="card__content--img"><img src="./src/img/chef-1.jpg" alt="" /></div>
+								<div class="card__content--img"><img src="./src/img/chef-2.jpg" alt="chef-2" /></div>
 								<h3 class="card__content--title">Kevin James</h3>
 								<p class="card__content--subtitle separate">Pastry Chef</p>
 
@@ -240,7 +248,7 @@
 						<!-- CARD 3 -->
 						<div class="col-lg-4">
 							<div class="card__content">
-								<div class="card__content--img"><img src="./src/img/chef-1.jpg" alt="" /></div>
+								<div class="card__content--img"><img src="./src/img/chef-3.jpg" alt="chef-3" /></div>
 								<h3 class="card__content--title">Kevin James</h3>
 								<p class="card__content--subtitle separate">Pastry Chef</p>
 
@@ -312,8 +320,8 @@
 								</div>
 
 								<div class="dual-btns text-white">
-									<a href="#" class="btn btn-lg btn-shadow" role="button">reservation</a>
-									<a href="#" class="btn btn-lg" role="button">contact us</a>
+									<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
+									<a href="#" class="btn btn-lg">contact us</a>
 								</div>
 							</div>
 						</div>
@@ -338,34 +346,175 @@
 						</div>
 					</div>
 				</section>
+			</div>
+		</section>
+		<!-- /.section__container -->
 
-				<!-- MOBILE APP -->
-				<section id="mobile-app" class="section__no-bg">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="content__no-bg">
-									<p class="hero__content--intro-left">mobile application</p>
-									<h3 class="content__no-bg--title">Download our mobile app</h3>
-									<p class="content__no-bg--msg">
-										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, incidunt.
-									</p>
+		<!-- MOBILE APP -->
+		<section id="mobile-app" class="section__no-bg">
+			<div class="container">
+				<div class="mobile-app--flex">
+					<div class="content__no-bg">
+						<p class="hero__content--intro-left">mobile application</p>
+						<h3 class="content__no-bg--title">Download our mobile app</h3>
+						<p class="content__no-bg--msg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, incidunt.</p>
+						<div class="dual-btns text-white">
+							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-google-play"></i>playstore</a>
+							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
+						</div>
+					</div>
 
-									<div class="dual-btns text-white">
-										<a href="#" class="btn btn-lg btn-shadow" role="button"
-											><i class="fab fa-google-play"></i>playstore</a
-										>
-										<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
-									</div>
+					<div>
+						<img src="./src/img/app.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- MENU -->
+		<div class="section__container menu__section">
+			<div class="container">
+				<div class="section__header--content">
+					<p class="section__header--subtitle">menu</p>
+					<h3 class="section__header--title">Our Menu</h3>
+					<p class="section__header--message">Choose from our wide range of delicious and freshly prepared meals.</p>
+				</div>
+
+				<ul class="menu__section--btns">
+					<li data-id="main-dishes" class="selected">main dishes</li>
+					<li data-id="salads">salads</li>
+					<li data-id="drinks">drinks</li>
+					<li data-id="deserts">deserts</li>
+				</ul>
+
+				<span class="separator"></span>
+
+				<!-- FOOD LIST -->
+				<div class="menu__section--food">
+					<!-- FOOD GRID 1 -->
+					<div class="menu__section--food-grid">
+						<div class="menu__section--food-list">
+							<!-- FOOD BODY -->
+							<div class="menu__section--food-body">
+								<div class="food__item--img">
+									<img src="./src/img/2.jpg" alt="" />
+								</div>
+								<div class="food__item--content">
+									<h3 class="food-title">Food Name</h3>
+									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								</div>
+								<div class="food__item--price">
+									<p class="food-price">$9.99</p>
+								</div>
+							</div>
+
+							<!-- FOOD BODY -->
+							<div class="menu__section--food-body">
+								<div class="food__item--img">
+									<img src="./src/img/3.jpg" alt="" />
+								</div>
+								<div class="food__item--content">
+									<h3 class="food-title">Food Name</h3>
+									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								</div>
+								<div class="food__item--price">
+									<p class="food-price">$9.99</p>
+								</div>
+							</div>
+
+							<!-- FOOD BODY -->
+							<div class="menu__section--food-body">
+								<div class="food__item--img">
+									<img src="./src/img/4.jpg" alt="" />
+								</div>
+								<div class="food__item--content">
+									<h3 class="food-title">Food Name</h3>
+									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								</div>
+								<div class="food__item--price">
+									<p class="food-price">$9.99</p>
+								</div>
+							</div>
+
+							<!-- FOOD BODY -->
+							<div class="menu__section--food-body">
+								<div class="food__item--img">
+									<img src="./src/img/5.jpg" alt="" />
+								</div>
+								<div class="food__item--content">
+									<h3 class="food-title">Food Name</h3>
+									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								</div>
+								<div class="food__item--price">
+									<p class="food-price">$9.99</p>
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
+
+					<!-- FOOD GRID 2 -->
+					<div class="menu__section--food-grid">
+						<div class="menu__section--food-list">
+							<!-- FOOD BODY -->
+							<div class="menu__section--food-body">
+								<div class="food__item--img">
+									<img src="./src/img/6.jpg" alt="" />
+								</div>
+								<div class="food__item--content">
+									<h3 class="food-title">Food Name</h3>
+									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								</div>
+								<div class="food__item--price">
+									<p class="food-price">$9.99</p>
+								</div>
+							</div>
+
+							<!-- FOOD BODY -->
+							<div class="menu__section--food-body">
+								<div class="food__item--img">
+									<img src="./src/img/5.jpg" alt="" />
+								</div>
+								<div class="food__item--content">
+									<h3 class="food-title">Food Name</h3>
+									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								</div>
+								<div class="food__item--price">
+									<p class="food-price">$9.99</p>
+								</div>
+							</div>
+
+							<!-- FOOD BODY -->
+							<div class="menu__section--food-body">
+								<div class="food__item--img">
+									<img src="./src/img/4.jpg" alt="" />
+								</div>
+								<div class="food__item--content">
+									<h3 class="food-title">Food Name</h3>
+									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								</div>
+								<div class="food__item--price">
+									<p class="food-price">$9.99</p>
+								</div>
+							</div>
+
+							<!-- FOOD BODY -->
+							<div class="menu__section--food-body">
+								<div class="food__item--img">
+									<img src="./src/img/3.jpg" alt="" />
+								</div>
+								<div class="food__item--content">
+									<h3 class="food-title">Food Name</h3>
+									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								</div>
+								<div class="food__item--price">
+									<p class="food-price">$9.99</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!-- /.container -->
-		</section>
-		<!-- /.section__container -->
+		</div>
 	</body>
 	<!-- CUSTOM JS -->
 	<script src="./src/js/index.js"></script>
