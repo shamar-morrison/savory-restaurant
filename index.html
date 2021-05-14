@@ -351,20 +351,21 @@
 		<!-- /.section__container -->
 
 		<!-- MOBILE APP -->
-		<section id="mobile-app" class="section__no-bg">
+		<section id="mobile-app" class="section__no-bg mobile-app">
 			<div class="container">
-				<div class="mobile-app--flex">
+				<div class="section__no-bg--flex">
 					<div class="content__no-bg">
 						<p class="hero__content--intro-left">mobile application</p>
 						<h3 class="content__no-bg--title">Download our mobile app</h3>
 						<p class="content__no-bg--msg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, incidunt.</p>
+
 						<div class="dual-btns text-white">
 							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-google-play"></i>playstore</a>
 							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
 						</div>
 					</div>
 
-					<div>
+					<div class="section__no-bg--image">
 						<img src="./src/img/app.png" alt="" />
 					</div>
 				</div>
@@ -372,7 +373,7 @@
 		</section>
 
 		<!-- MENU -->
-		<div class="section__container menu__section">
+		<section id="menu" class="section__container menu__section">
 			<div class="container">
 				<div class="section__header--content">
 					<p class="section__header--subtitle">menu</p>
@@ -381,140 +382,548 @@
 				</div>
 
 				<ul class="menu__section--btns">
-					<li data-id="main-dishes" class="selected">main dishes</li>
-					<li data-id="salads">salads</li>
+					<li data-id="main" class="selected">main dishes</li>
+					<li data-id="sides">sides</li>
 					<li data-id="drinks">drinks</li>
 					<li data-id="deserts">deserts</li>
 				</ul>
 
 				<span class="separator"></span>
 
-				<!-- FOOD LIST -->
-				<div class="menu__section--food">
-					<!-- FOOD GRID 1 -->
-					<div class="menu__section--food-grid">
-						<div class="menu__section--food-list">
-							<!-- FOOD BODY -->
-							<div class="menu__section--food-body">
-								<div class="food__item--img">
-									<img src="./src/img/2.jpg" alt="" />
+				<!-- MAIN DISHES LIST -->
+				<div class="food-list-wrapper">
+					<div class="menu__section--food active-food" data-target="main">
+						<!-- FOOD GRID 1 -->
+						<div class="menu__section--food-grid">
+							<div class="menu__section--food-list">
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/2.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">MAIN LIST</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
-								<div class="food__item--content">
-									<h3 class="food-title">Food Name</h3>
-									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/3.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Veggie Pizza</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
-								<div class="food__item--price">
-									<p class="food-price">$9.99</p>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/4.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Grilled Lobster</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/5.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Chilli Crayfish</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
 							</div>
+						</div>
+						<!-- MAIN DISHES GRID -->
 
-							<!-- FOOD BODY -->
-							<div class="menu__section--food-body">
-								<div class="food__item--img">
-									<img src="./src/img/3.jpg" alt="" />
+						<!-- MAIN DISHES GRID 2 -->
+						<div class="menu__section--food-grid">
+							<div class="menu__section--food-list">
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/5.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Enchiladas</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
-								<div class="food__item--content">
-									<h3 class="food-title">Food Name</h3>
-									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/4.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Stew Chicken</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
-								<div class="food__item--price">
-									<p class="food-price">$9.99</p>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/6.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Coconut Soup</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/2.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Smoked Salmon</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
 							</div>
+						</div>
+						<!-- MAIN DISHES GRID 2 -->
+					</div>
+				</div>
+				<!-- MAIN DISHES LIST -->
 
-							<!-- FOOD BODY -->
-							<div class="menu__section--food-body">
-								<div class="food__item--img">
-									<img src="./src/img/4.jpg" alt="" />
+				<!-- SIDES LIST -->
+				<div class="food-list-wrapper">
+					<div class="menu__section--food hidden-food" data-target="sides">
+						<!-- FOOD GRID 1 -->
+						<div class="menu__section--food-grid">
+							<div class="menu__section--food-list">
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/5.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">SIDES LIST</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
-								<div class="food__item--content">
-									<h3 class="food-title">Food Name</h3>
-									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/4.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Greek Salad</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
-								<div class="food__item--price">
-									<p class="food-price">$9.99</p>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/2.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Parmesan Pork</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/3.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Roasted Steak</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
 							</div>
+						</div>
+						<!-- SIDES GRID -->
 
-							<!-- FOOD BODY -->
-							<div class="menu__section--food-body">
-								<div class="food__item--img">
-									<img src="./src/img/5.jpg" alt="" />
+						<!-- SIDES GRID 2 -->
+						<div class="menu__section--food-grid">
+							<div class="menu__section--food-list">
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/6.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Shrimp Pasta</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
-								<div class="food__item--content">
-									<h3 class="food-title">Food Name</h3>
-									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/5.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Cheesy Fries</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
-								<div class="food__item--price">
-									<p class="food-price">$9.99</p>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/4.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Bread Sticks</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/3.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Toasted Crisps</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
 								</div>
 							</div>
+						</div>
+						<!-- SIDES GRID 2 -->
+					</div>
+				</div>
+				<!-- SIDES LIST -->
+
+				<!-- DRINKS LIST -->
+				<div class="food-list-wrapper">
+					<div class="menu__section--food hidden-food" data-target="drinks">
+						<!-- FOOD GRID 1 -->
+						<div class="menu__section--food-grid">
+							<div class="menu__section--food-list">
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/5.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">DRINKS LIST</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/4.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Greek Salad</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/2.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Parmesan Pork</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/3.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Roasted Steak</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- DRINKS GRID -->
+
+						<!-- DRINKS GRID 2 -->
+						<div class="menu__section--food-grid">
+							<div class="menu__section--food-list">
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/6.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Shrimp Pasta</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/5.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Cheesy Fries</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/4.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Bread Sticks</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/3.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Toasted Crisps</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- DRINKS GRID 2 -->
+					</div>
+				</div>
+				<!-- DRINKS LIST -->
+
+				<!-- DESERTS LIST -->
+				<div class="food-list-wrapper">
+					<div class="menu__section--food hidden-food" data-target="deserts">
+						<!-- DESERTS GRID 1 -->
+						<div class="menu__section--food-grid">
+							<div class="menu__section--food-list">
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/5.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">DESERTS LIST</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/4.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Greek Salad</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/2.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Parmesan Pork</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/3.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Roasted Steak</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- DESERTS GRID -->
+
+						<!-- DESERTS GRID 2 -->
+						<div class="menu__section--food-grid">
+							<div class="menu__section--food-list">
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/6.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Shrimp Pasta</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/5.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Cheesy Fries</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/4.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Bread Sticks</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+								<!-- FOOD BODY -->
+								<div class="menu__section--food-body">
+									<div class="food__item--img">
+										<img src="./src/img/3.jpg" alt="" />
+									</div>
+									<div class="food__item--content">
+										<h3 class="food-title">Toasted Crisps</h3>
+										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+									</div>
+									<div class="food__item--price">
+										<p class="food-price">$9.99</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- DESERTS GRID 2 -->
+					</div>
+					<!-- DESERTS LIST -->
+				</div>
+				<!-- FOOD LIST WRAPPER -->
+			</div>
+		</section>
+
+		<!-- BUY ONE GET ONE FREE -->
+		<section id="power-deal" class="section__no-bg bogof">
+			<div class="container">
+				<div class="section__no-bg--flex">
+					<div class="content__no-bg">
+						<p class="hero__content--intro-left">power deals</p>
+						<h3 class="content__no-bg--title">
+							Buy one, <br />
+							Get one free!
+						</h3>
+						<p class="content__no-bg--msg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, incidunt.</p>
+
+						<div class="dual-btns text-white">
+							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-google-play"></i>playstore</a>
+							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
 						</div>
 					</div>
 
-					<!-- FOOD GRID 2 -->
-					<div class="menu__section--food-grid">
-						<div class="menu__section--food-list">
-							<!-- FOOD BODY -->
-							<div class="menu__section--food-body">
-								<div class="food__item--img">
-									<img src="./src/img/6.jpg" alt="" />
-								</div>
-								<div class="food__item--content">
-									<h3 class="food-title">Food Name</h3>
-									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-								</div>
-								<div class="food__item--price">
-									<p class="food-price">$9.99</p>
-								</div>
-							</div>
-
-							<!-- FOOD BODY -->
-							<div class="menu__section--food-body">
-								<div class="food__item--img">
-									<img src="./src/img/5.jpg" alt="" />
-								</div>
-								<div class="food__item--content">
-									<h3 class="food-title">Food Name</h3>
-									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-								</div>
-								<div class="food__item--price">
-									<p class="food-price">$9.99</p>
-								</div>
-							</div>
-
-							<!-- FOOD BODY -->
-							<div class="menu__section--food-body">
-								<div class="food__item--img">
-									<img src="./src/img/4.jpg" alt="" />
-								</div>
-								<div class="food__item--content">
-									<h3 class="food-title">Food Name</h3>
-									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-								</div>
-								<div class="food__item--price">
-									<p class="food-price">$9.99</p>
-								</div>
-							</div>
-
-							<!-- FOOD BODY -->
-							<div class="menu__section--food-body">
-								<div class="food__item--img">
-									<img src="./src/img/3.jpg" alt="" />
-								</div>
-								<div class="food__item--content">
-									<h3 class="food-title">Food Name</h3>
-									<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-								</div>
-								<div class="food__item--price">
-									<p class="food-price">$9.99</p>
-								</div>
-							</div>
-						</div>
+					<div class="section__no-bg--image">
+						<img src="./src/img/burger.png" alt="" />
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+
+		<!-- REVIEWS -->
+		<section id="reviews" class="section__container reviews__section">
+			<div class="section__header--content">
+				<p class="section__header--subtitle">reviews</p>
+				<h3 class="section__header--title">What our visitors say</h3>
+				<p class="section__header--message">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem cumque omnis, adipisci eum labore illo.
+				</p>
+			</div>
+		</section>
 	</body>
 	<!-- CUSTOM JS -->
 	<script src="./src/js/index.js"></script>

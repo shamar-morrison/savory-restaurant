@@ -27,9 +27,10 @@ img,
 .btn,
 .btn-shadow::after,
 .navbar,
-.scroll-icon::after {
+.scroll-icon::after,
+.menu__section--food {
 	transition: 750ms cubic-bezier(0.25, 0.8, 0.25, 1);
-	transition-property: background-color, transform, color, border-radius;
+	transition-property: background-color, opacity, transform, color, border-radius;
 }
 
 .modal,
@@ -265,7 +266,7 @@ h6 {
 // SECTION CONTAINER
 .section__container {
 	width: 95%;
-	padding: 150px 0 30px 0;
+	padding: 150px 0 30px;
 	margin: auto;
 	position: relative;
 	z-index: 8;
@@ -414,6 +415,10 @@ h6 {
 	&--title {
 		font-size: 3rem;
 		margin-top: 10px;
+
+		&.reviews {
+			margin-top: 0;
+		}
 	}
 
 	&--message {
@@ -632,39 +637,94 @@ h6 {
 	margin-top: 40px;
 }
 
+// BUY ONE, GET ONE FREE
 // MOBILE APP
-
-.content__no-bg {
-	transform: translateY(145%);
+.section__no-bg {
 	color: #fff;
-	opacity: 0.85;
+	opacity: 0.9;
 
-	&--title {
-		width: 80%;
-		font-size: 4.25rem;
+	.content__no-bg {
+		&--title {
+			width: 80%;
+			font-size: 4.25rem;
+
+			@include media-breakpoint-down(xxl) {
+				width: 100%;
+			}
+
+			@include media-breakpoint-down(lg) {
+				width: 80%;
+				text-align: center;
+				margin: auto;
+			}
+		}
+
+		&--msg {
+			width: 50%;
+			margin-top: 40px;
+
+			@include media-breakpoint-down(xxl) {
+				width: 80%;
+			}
+
+			@include media-breakpoint-down(lg) {
+				text-align: center;
+				margin: auto;
+				margin-top: 30px;
+			}
+		}
 	}
 
-	&--msg {
-		width: 50%;
-		margin-top: 40px;
+	&.mobile-app {
+		transform: translateY(840px);
+
+		img {
+			max-width: 400px;
+			object-fit: cover;
+			transform: translate(20%, -8%);
+		}
+	}
+
+	&.bogof {
+		transform: translateY(900px);
+		margin-bottom: 90px;
+
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 185px;
+		}
+
+		img {
+			max-width: 600px;
+			object-fit: cover;
+			transform: translate(0, -20%);
+
+			@include media-breakpoint-down(xl) {
+				max-width: 500px;
+			}
+		}
+	}
+
+	&--flex {
+		display: flex;
+
+		@include media-breakpoint-down(lg) {
+			flex-wrap: wrap;
+		}
+
+		> * {
+			flex-basis: 100%;
+		}
 	}
 
 	.dual-btns {
+		@include media-breakpoint-down(lg) {
+			justify-content: center;
+		}
 		i {
 			font-size: 1.1rem;
 			margin-right: 10px;
 			transform: translateY(2px);
 		}
-	}
-}
-
-.mobile-app--flex {
-	display: flex;
-	// flex-wrap: wrap;
-
-	img {
-		max-width: 400px;
-		transform: translate(-30%, 140%);
 	}
 }
 
@@ -773,7 +833,7 @@ h6 {
 // MENU
 .menu__section {
 	transform: translateY(780px);
-	padding-top: 100px;
+	padding: $section-padding;
 
 	&--btns {
 		display: flex;
@@ -786,6 +846,7 @@ h6 {
 		text-transform: uppercase;
 		cursor: pointer;
 		margin-top: 40px;
+		margin-bottom: 0;
 		letter-spacing: 2px;
 	}
 
@@ -872,4 +933,26 @@ h6 {
 		font-weight: 600;
 		font-size: 1.3rem;
 	}
+}
+
+.hidden-food {
+	// transform: translateY(-100%) scale(0.95);
+	opacity: 0;
+	pointer-events: none;
+}
+
+[data-target='sides'],
+[data-target='drinks'],
+[data-target='deserts'] {
+	position: absolute;
+	// transform: translateY(-100%) scale(0.95);
+}
+
+.food-list-wrapper {
+	position: relative;
+}
+
+// REVIEWS
+.reviews__section {
+	padding: $section-padding;
 }
