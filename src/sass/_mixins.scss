@@ -12,6 +12,16 @@
 	z-index: -1;
 }
 
+@mixin input {
+	outline: 0;
+	border: 0;
+	background-color: #fff;
+	padding: 15px 30px;
+	border-radius: $border-radius-sm;
+	box-shadow: $modal-input-shadow;
+	font-size: 0.9rem;
+}
+
 @mixin subtitle {
 	font-size: 0.7rem;
 	letter-spacing: 2.5px;

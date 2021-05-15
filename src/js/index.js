@@ -1,5 +1,25 @@
 'use strict';
 
+if (module.hot) {
+	module.hot.accept();
+}
+
+/**
+ * Swiper Slider
+ */
+
+// core version + navigation, pagination modules:
+import Swiper from '../../node_modules/swiper/bundle';
+
+// import Swiper styles
+import '../../node_modules/swiper/swiper-bundle.css';
+
+// configure Swiper to use modules
+// SwiperCore.use([Navigation, Pagination]);
+
+/**
+ * Init menu navigation
+ */
 window.onload = function () {
 	// prepare menu section
 	const sidesFoods = document.querySelector('[data-target="sides"]');
@@ -81,12 +101,12 @@ document.addEventListener('keydown', event => {
 /**
  * Menu Animation
  */
-const menuBtns = document.querySelector('.menu__section--btns');
 const mainFoods = document.querySelector('[data-target="main"]');
 const sidesFoods = document.querySelector('[data-target="sides"]');
 const drinksFoods = document.querySelector('[data-target="drinks"]');
 const desertsFoods = document.querySelector('[data-target="deserts"]');
 
+const menuBtns = document.querySelector('.menu__section--btns');
 const mainDishesBtn = document.querySelector('[data-id="main"]');
 const sidesBtn = document.querySelector('[data-id="sides"]');
 const drinksBtn = document.querySelector('[data-id="drinks"]');
@@ -116,7 +136,7 @@ const updateBtn = btn => {
 };
 
 /**
- * Update the menu to display 'foodList' HTMLElement
+ * Update the menu to display 'foodList'
  * and update the selected menu btn
  */
 const updateMenu = (foodList, foodBtn) => {
@@ -165,4 +185,45 @@ menuBtns.addEventListener('click', event => {
 		default:
 			break;
 	}
+});
+
+/**
+ * REVIEW SLIDER
+ */
+const sliderNavBtns = document.querySelector('.slider__nav--btns');
+const reviewsContent = document.querySelector('.reviews__content');
+
+// options for slider
+const swiperOptions = {
+	direction: 'horizontal',
+	pagination: {
+		el: '.reviews__dots',
+		type: 'bullets',
+		bulletElement: 'li',
+		bulletClass: 'dot',
+		bulletActiveClass: 'active-dot',
+		clickable: true,
+	},
+	navigationArrows: {
+		nextEl: '.slider__nav-next',
+		prevEl: '.slider__nav-prev',
+	},
+	spaceBetween: 30, // px
+	loop: true,
+	slidesPerView: 3,
+	centeredSlides: true,
+	slideActiveClass: 'active-test',
+	speed: 750,
+};
+
+// init slider
+const swiper = new Swiper('.reviews__content', swiperOptions);
+reviewsContent.swiper;
+
+// slider nav btns
+sliderNavBtns.addEventListener('click', event => {
+	const navTo = event.target.dataset.to;
+
+	if (navTo === 'left') swiper.slidePrev();
+	else swiper.slideNext();
 });
