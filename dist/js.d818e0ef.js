@@ -12239,9 +12239,9 @@ module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/index.js":[function(require,module,exports) {
 'use strict';
 
-var _bundle = _interopRequireDefault(require("../../node_modules/swiper/bundle"));
+var _bundle = _interopRequireDefault(require("swiper/bundle"));
 
-require("../../node_modules/swiper/swiper-bundle.css");
+require("swiper/swiper-bundle.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12268,15 +12268,29 @@ if (module.hot) {
 
 // configure Swiper to use modules
 // SwiperCore.use([Navigation, Pagination]);
-
+var mainFoods = document.querySelector('[data-target="main"]');
+var sidesFoods = document.querySelector('[data-target="sides"]');
+var drinksFoods = document.querySelector('[data-target="drinks"]');
+var desertsFoods = document.querySelector('[data-target="deserts"]');
+var menuBtns = document.querySelector('.menu__section--btns');
+var mainDishesBtn = document.querySelector('[data-id="main"]');
+var sidesBtn = document.querySelector('[data-id="sides"]');
+var drinksBtn = document.querySelector('[data-id="drinks"]');
+var desertsBtn = document.querySelector('[data-id="deserts"]');
+var sliderNavBtns = document.querySelector('.slider__nav--btns');
+var reviewsContent = document.querySelector('.reviews__content');
+var closeModalBtn = document.querySelector('.close-modal');
+var modalOverlay = document.querySelector('.modal-overlay');
+var modalContent = document.querySelector('.modal-content');
+var modal = document.querySelector('.modal');
+var mobileToggle = document.querySelector('.mobile-toggle');
+var navLinks = document.querySelector('.nav-links');
 /**
  * Init menu navigation
  */
+
 window.onload = function () {
   // prepare menu section
-  var sidesFoods = document.querySelector('[data-target="sides"]');
-  var drinksFoods = document.querySelector('[data-target="drinks"]');
-  var desertsFoods = document.querySelector('[data-target="deserts"]');
   sidesFoods.style.transform = 'translateY(-100%) scale(0.95)';
   drinksFoods.style.transform = 'translateY(-100%) scale(0.95)';
   desertsFoods.style.transform = 'translateY(-100%) scale(0.95)';
@@ -12288,8 +12302,7 @@ var homeSec = document.querySelector('#home');
 
 var stickyNav = function stickyNav(event) {
   var _event = _slicedToArray(event, 1),
-      entry = _event[0]; // console.log('entry', entry);
-
+      entry = _event[0];
 
   if (!entry.isIntersecting) {
     // if not intersecting
@@ -12304,12 +12317,11 @@ var stickyNav = function stickyNav(event) {
 var navbarObs = new IntersectionObserver(stickyNav, {
   threshold: 0.8
 });
-navbarObs.observe(homeSec); // RESERVE TABLE MODAL
-
-var closeModalBtn = document.querySelector('.close-modal');
-var modalOverlay = document.querySelector('.modal-overlay');
-var modalContent = document.querySelector('.modal-content');
-var modal = document.querySelector('.modal'); // show modal
+navbarObs.observe(homeSec);
+/**
+ * RESERVE TABLE MODAL
+ */
+// show modal
 
 var showModal = function showModal() {
   modal.style.zIndex = '9999';
@@ -12347,16 +12359,7 @@ document.addEventListener('keydown', function (event) {
 /**
  * Menu Animation
  */
-
-var mainFoods = document.querySelector('[data-target="main"]');
-var sidesFoods = document.querySelector('[data-target="sides"]');
-var drinksFoods = document.querySelector('[data-target="drinks"]');
-var desertsFoods = document.querySelector('[data-target="deserts"]');
-var menuBtns = document.querySelector('.menu__section--btns');
-var mainDishesBtn = document.querySelector('[data-id="main"]');
-var sidesBtn = document.querySelector('[data-id="sides"]');
-var drinksBtn = document.querySelector('[data-id="drinks"]');
-var desertsBtn = document.querySelector('[data-id="deserts"]'); // hide active food list
+// hide active food list
 
 var hideActiveList = function hideActiveList(foodList) {
   foodList.classList.remove('active-food');
@@ -12433,11 +12436,9 @@ menuBtns.addEventListener('click', function (event) {
   }
 });
 /**
- * REVIEW SLIDER
+ * HERO SECTION & REVIEW SECTION SLIDER
  */
-
-var sliderNavBtns = document.querySelector('.slider__nav--btns');
-var reviewsContent = document.querySelector('.reviews__content'); // options for slider
+// options for review slider
 
 var swiperOptions = {
   direction: 'horizontal',
@@ -12460,16 +12461,65 @@ var swiperOptions = {
   centeredSlides: true,
   slideActiveClass: 'active-test',
   speed: 750
-}; // init slider
+}; // options for hero slider
+
+var heroSwiperOptions = {
+  direction: 'horizontal',
+  speed: 800,
+  pagination: {
+    el: '.hero__slider-nav--dots',
+    type: 'bullets',
+    bulletElement: 'li',
+    bulletClass: 'hero-nav-dot',
+    bulletActiveClass: 'hero-nav-dot-active',
+    clickable: true
+  },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  navigationArrows: {
+    nextEl: '.hero-slider-right',
+    prevEl: '.hero-slider-left'
+  },
+  parallax: true,
+  autoplay: {
+    delay: 5000
+  }
+}; // init review slider
 
 var swiper = new _bundle.default('.reviews__content', swiperOptions);
-reviewsContent.swiper; // slider nav btns
+reviewsContent.swiper; // init hero slider
+
+var heroSwiper = new _bundle.default('.hero__swiper', heroSwiperOptions);
+heroSwiper.swiper; // review slider nav btns
 
 sliderNavBtns.addEventListener('click', function (event) {
   var navTo = event.target.dataset.to;
   if (navTo === 'left') swiper.slidePrev();else swiper.slideNext();
-});
-},{"../../node_modules/swiper/bundle":"node_modules/swiper/swiper-bundle.esm.js","../../node_modules/swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+}); // toggle mobile menu
+
+var toggleMobileMenu = function toggleMobileMenu() {
+  if (mobileToggle.classList.contains('open')) {
+    // close menu
+    navLinks.style.opacity = 0;
+    navLinks.style.transform = 'translate(-50%, 40px)';
+    navLinks.style.pointerEvents = 'none';
+    mobileToggle.classList.remove('open');
+    mobileToggle.classList.add('closed');
+  } else {
+    // open menu
+    navLinks.style.opacity = 1;
+    navLinks.style.transform = 'translate(-50%, 0)';
+    navLinks.style.pointerEvents = 'auto';
+    mobileToggle.classList.add('open');
+    mobileToggle.classList.remove('closed');
+  }
+}; // MOBILE MENU
+
+
+mobileToggle.addEventListener('click', toggleMobileMenu);
+},{"swiper/bundle":"node_modules/swiper/swiper-bundle.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12497,7 +12547,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49956" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50122" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

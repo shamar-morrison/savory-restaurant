@@ -16,20 +16,23 @@
 
 		<!-- NAVBAR -->
 		<div class="sticky">
-			<nav class="navbar grid">
-				<div class="container">
-					<h1 class="logo">Savory</h1>
+			<nav class="navbar">
+				<!-- NAVBAR LOGO -->
+				<div class="navbar-brand">
+					<h1 class="navbar-logo">Savory</h1>
 				</div>
 				<!-- MENU ITEMS -->
 				<ul class="nav-links">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#menu">Menu</a></li>
-					<li><a href="#blog">Blog</a></li>
+					<li><a href="#cooking-tips">Blog</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<!-- RESERVATION BTN -->
 				<button class="btn btn-lg btn-reserve">reservation</button>
+				<!-- MOBILE MENU TOGGLE -->
+				<span class="mobile-toggle closed"><i class="fas fa-bars"></i></span>
 			</nav>
 		</div>
 
@@ -37,18 +40,54 @@
 		<header id="home" class="section__home">
 			<div class="hero-overlay"></div>
 			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
+				<div class="section__home--flex">
+					<div class="section__home--flex-one">
 						<!-- HERO CONTENT -->
 						<div class="hero__content">
-							<p class="hero__content--intro-left">hey, there!</p>
-							<h3 class="hero__content--title">Welcome back to Savory.</h3>
-							<p class="hero__content--message">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo vel, ullam perspiciatis fugit dolor.
-							</p>
-							<div class="hero__content--btns grid">
-								<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
-								<button class="btn btn-lg btn-trans">view menu</button>
+							<div class="hero__swiper swiper-container">
+								<div class="swiper-wrapper">
+									<!-- SLIDER 1 -->
+									<div class="swiper-slide">
+										<p class="hero__content--intro-left">hey, there!</p>
+										<h3 class="hero__content--title">Welcome back to Savory.</h3>
+										<p class="hero__content--message">
+											Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo vel, ullam perspiciatis fugit
+											dolor.
+										</p>
+										<div class="hero__content--btns">
+											<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
+											<button class="btn btn-lg btn-trans">view menu</button>
+										</div>
+									</div>
+									<!-- SLIDER 2 -->
+									<div class="swiper-slide">
+										<p class="hero__content--intro-left">hey, there!</p>
+										<h3 class="hero__content--title">Reserve your table.</h3>
+										<p class="hero__content--message">
+											Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo vel, ullam perspiciatis fugit
+											dolor.
+										</p>
+										<div class="hero__content--btns">
+											<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
+											<button class="btn btn-lg btn-trans">view menu</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- SLIDER NAV -->
+							<div class="hero__slider-nav">
+								<!-- PAGINATION DOTS -->
+								<ul class="hero__slider-nav--dots">
+									<li class="hero-nav-dot hero-nav-dot-active"></li>
+									<li class="hero-nav-dot"></li>
+									<li class="hero-nav-dot"></li>
+								</ul>
+								<!-- SLIDER ARROWS -->
+								<div class="hero__slider-nav--arrows">
+									<span class="hero-slider-left"><i class="fas fa-arrow-left"></i></span>
+									<span class="hero-slider-right"><i class="fas fa-arrow-right"></i></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -69,9 +108,6 @@
 						<input type="text" name="first-name" placeholder="First Name">
 						<input type="text" name="last-name" placeholder="Last Name">
 						<input type="number" name="phone" placeholder="Tel. Num">
-					</div>
-
-					<div class="form-row">
 						<select name="Persons" placeholder="No. Persons">
 							<option value="1 Person">1 Person</option>
 							<option value="2 Person">2 Persons</option>
@@ -80,12 +116,14 @@
 							<option value="5 Person">5 Persons</option>
 							<option value="6 or more Persons">6 or more Persons</option>
 						</select>
-
-						<input type="date" name="date" placeholder="Date">
+						<input type="date" size="5" name="date" placeholder="Date">
 						<input type="time" name="time">
 					</div>
+
 					<!-- MESSAGE -->
-					<textarea name="message" id="reservation-msg" placeholder="Write a message..." rows="3"></textarea>
+					<div class="msg-wrapper">
+						<textarea name="message" id="reservation-msg" placeholder="Write a message..." rows="3"></textarea>
+					</div>
 					<!-- BUTTON -->
 					<button class="btn btn-lg reserve-table">reserve a table</button>
 				</form>
@@ -93,7 +131,7 @@
 		</div>
 
 		<!-- SECTION CONTAINER -->
-		<section class="section__container">
+		<section class="section__container top__section">
 			<span class="scroll-icon-bg">
 				<a href="#about"><i class="scroll-icon"></i></a>
 			</span>
@@ -203,8 +241,8 @@
 						<div class="col-lg-4">
 							<div class="card__content">
 								<div class="card__content--img"><img src="/chef-1.629a6e6b.jpg" alt="chef"></div>
-								<h3 class="card__content--title">Kevin James</h3>
-								<p class="card__content--subtitle separate">Pastry Chef</p>
+								<h3 class="card__content--title">Trevor Belmont</h3>
+								<p class="card__content--subtitle separate">Sous Chef</p>
 
 								<ul class="card__content--social">
 									<li>
@@ -226,8 +264,8 @@
 						<div class="col-lg-4">
 							<div class="card__content">
 								<div class="card__content--img"><img src="/chef-2.d7dd51a8.jpg" alt="chef-2"></div>
-								<h3 class="card__content--title">Kevin James</h3>
-								<p class="card__content--subtitle separate">Pastry Chef</p>
+								<h3 class="card__content--title">Adrian Tepes</h3>
+								<p class="card__content--subtitle separate">Head Chef</p>
 
 								<ul class="card__content--social">
 									<li>
@@ -249,7 +287,7 @@
 						<div class="col-lg-4">
 							<div class="card__content">
 								<div class="card__content--img"><img src="/chef-3.e0dda572.jpg" alt="chef-3"></div>
-								<h3 class="card__content--title">Kevin James</h3>
+								<h3 class="card__content--title">Jack Bauer</h3>
 								<p class="card__content--subtitle separate">Pastry Chef</p>
 
 								<ul class="card__content--social">
@@ -308,41 +346,39 @@
 				<!-- OPENING HOURS -->
 				<section id="opening-hours" class="opening-hours">
 					<span class="white-bg"></span>
-					<div class="row">
+					<div class="opening-hours--container">
 						<!-- IMAGE -->
-						<div class="col-lg-8">
-							<div class="opening-hours--img">
-								<span class="overlay"></span>
-								<div class="opening-hours--content">
-									<p class="hero__content--intro-left">our hours</p>
-									<h3 class="opening-hours--title">Opening Hours</h3>
-									<p class="opening-hours--msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nihil!</p>
-								</div>
 
-								<div class="dual-btns text-white">
-									<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
-									<a href="#" class="btn btn-lg">contact us</a>
-								</div>
+						<div class="opening-hours--img">
+							<span class="overlay"></span>
+							<div class="opening-hours--content">
+								<p class="hero__content--intro-left">our hours</p>
+								<h3 class="opening-hours--title">Opening Hours</h3>
+								<p class="opening-hours--msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nihil!</p>
+							</div>
+
+							<div class="dual-btns text-white">
+								<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
+								<a href="#" class="btn btn-lg">contact us</a>
 							</div>
 						</div>
 
 						<!-- DAYS / HOURS -->
-						<div class="col-lg-4">
-							<div class="opening-hours--time">
-								<ul class="days-hours">
-									<li>
-										<p class="day">monday to friday</p>
-										<h3 class="time">05 : 00</h3>
-										<h3 class="time">17 : 30</h3>
-									</li>
 
-									<li>
-										<p class="day">saturday to sunday</p>
-										<h3 class="time">10 : 00</h3>
-										<h3 class="time">14 : 00</h3>
-									</li>
-								</ul>
-							</div>
+						<div class="opening-hours--time">
+							<ul class="days-hours">
+								<li>
+									<p class="day">monday to friday</p>
+									<h3 class="time">05 : 00</h3>
+									<h3 class="time">17 : 30</h3>
+								</li>
+
+								<li>
+									<p class="day">saturday to sunday</p>
+									<h3 class="time">10 : 00</h3>
+									<h3 class="time">14 : 00</h3>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</section>
@@ -523,7 +559,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/5.a8ba9001.jpg" alt="">
+										<img src="/5.a8ba9001.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">SIDES LIST</h3>
@@ -536,7 +572,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/4.d60f4bbc.jpg" alt="">
+										<img src="/4.d60f4bbc.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Greek Salad</h3>
@@ -549,7 +585,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/2.5a5d42a0.jpg" alt="">
+										<img src="/2.5a5d42a0.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Parmesan Pork</h3>
@@ -562,7 +598,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/3.06d9196d.jpg" alt="">
+										<img src="/3.06d9196d.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Roasted Steak</h3>
@@ -582,7 +618,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/6.c2bb60f2.jpg" alt="">
+										<img src="/6.c2bb60f2.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Shrimp Pasta</h3>
@@ -595,7 +631,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/5.a8ba9001.jpg" alt="">
+										<img src="/5.a8ba9001.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Cheesy Fries</h3>
@@ -608,7 +644,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/4.d60f4bbc.jpg" alt="">
+										<img src="/4.d60f4bbc.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Bread Sticks</h3>
@@ -621,7 +657,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/3.06d9196d.jpg" alt="">
+										<img src="/3.06d9196d.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Toasted Crisps</h3>
@@ -647,7 +683,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/5.a8ba9001.jpg" alt="">
+										<img src="/5.a8ba9001.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">DRINKS LIST</h3>
@@ -660,7 +696,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/4.d60f4bbc.jpg" alt="">
+										<img src="/4.d60f4bbc.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Greek Salad</h3>
@@ -673,7 +709,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/2.5a5d42a0.jpg" alt="">
+										<img src="/2.5a5d42a0.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Parmesan Pork</h3>
@@ -686,7 +722,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/3.06d9196d.jpg" alt="">
+										<img src="/3.06d9196d.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Roasted Steak</h3>
@@ -706,7 +742,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/6.c2bb60f2.jpg" alt="">
+										<img src="/6.c2bb60f2.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Shrimp Pasta</h3>
@@ -719,7 +755,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/5.a8ba9001.jpg" alt="">
+										<img src="/5.a8ba9001.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Cheesy Fries</h3>
@@ -732,7 +768,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/4.d60f4bbc.jpg" alt="">
+										<img src="/4.d60f4bbc.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Bread Sticks</h3>
@@ -745,7 +781,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/3.06d9196d.jpg" alt="">
+										<img src="/3.06d9196d.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Toasted Crisps</h3>
@@ -771,7 +807,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/5.a8ba9001.jpg" alt="">
+										<img src="/5.a8ba9001.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">DESERTS LIST</h3>
@@ -784,7 +820,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/4.d60f4bbc.jpg" alt="">
+										<img src="/4.d60f4bbc.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Greek Salad</h3>
@@ -797,7 +833,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/2.5a5d42a0.jpg" alt="">
+										<img src="/2.5a5d42a0.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Parmesan Pork</h3>
@@ -810,7 +846,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/3.06d9196d.jpg" alt="">
+										<img src="/3.06d9196d.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Roasted Steak</h3>
@@ -830,7 +866,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/6.c2bb60f2.jpg" alt="">
+										<img src="/6.c2bb60f2.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Shrimp Pasta</h3>
@@ -843,7 +879,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/5.a8ba9001.jpg" alt="">
+										<img src="/5.a8ba9001.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Cheesy Fries</h3>
@@ -856,7 +892,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/4.d60f4bbc.jpg" alt="">
+										<img src="/4.d60f4bbc.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Bread Sticks</h3>
@@ -869,7 +905,7 @@
 								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
 									<div class="food__item--img">
-										<img src="/3.06d9196d.jpg" alt="">
+										<img src="/3.06d9196d.jpg" alt="food image">
 									</div>
 									<div class="food__item--content">
 										<h3 class="food-title">Toasted Crisps</h3>
@@ -893,7 +929,7 @@
 		<section id="power-deal" class="section__no-bg bogof">
 			<div class="container">
 				<div class="section__no-bg--flex">
-					<div class="content__no-bg">
+					<div class="content__no-bg bogof--info-mt">
 						<p class="hero__content--intro-left">power deals</p>
 						<h3 class="content__no-bg--title">
 							Buy one, <br>
@@ -1010,7 +1046,7 @@
 
 				<!-- REVIEW SLIDER DOT CONTROLS -->
 				<div class="reviews__controls">
-					<a href="#menu" class="btn btn-lg">view our menu</a>
+					<a href="#menu" class="btn btn-lg hover-white">view our menu</a>
 					<div class="reviews__controls--btns">
 						<ul class="reviews__dots">
 							<li class="dot"></li>
@@ -1110,7 +1146,7 @@
 						<p class="footer-msg">
 							Read all our articles, blog posts and tips over on our blog. We add new content every week!
 						</p>
-						<a href="#blog" class="btn btn-lg">visit blog</a>
+						<a href="#blog" class="btn btn-lg hover-white">visit blog</a>
 					</div>
 
 					<span class="separator"></span>
@@ -1126,6 +1162,7 @@
 						</p>
 					</div>
 
+					<!-- NEWSLETTER INPUT FORM -->
 					<div class="newsletter-contact">
 						<form>
 							<input type="email" name="email" placeholder="Enter your email address" required="">
@@ -1133,9 +1170,117 @@
 						</form>
 					</div>
 				</section>
+
+				<span class="separator"></span>
+
+				<!-- CONTACT -->
+				<section id="contact">
+					<div class="section__header--content">
+						<p class="section__header--subtitle">contact</p>
+						<h3 class="section__header--title">Write us a message</h3>
+						<p class="section__header--message">
+							Have a question about our services, or just want to know how we're doing?. Drop us a line.
+						</p>
+					</div>
+
+					<!-- CONTACT FORM INPUTS -->
+					<form class="contact-form--body">
+						<!-- NAME -->
+						<div class="contact-form--name">
+							<input type="text" name="first-name" placeholder="First Name" required="">
+							<input type="text" name="last-name" placeholder="Last Name" required="">
+						</div>
+						<!-- TEL. & EMAIL -->
+						<div class="contact-form--tel">
+							<input type="number" name="tel" placeholder="Tel. ">
+							<input type="email" name="emal" placeholder="Email" required="">
+						</div>
+						<!-- MESSAGE -->
+						<div class="contact-form--msg">
+							<textarea type="text" name="message" placeholder="Write message here..." rows="5" required=""></textarea>
+						</div>
+
+						<!-- SEND MSG BTN -->
+						<div class="send-btn">
+							<button class="btn btn-lg" type="submit">send message</button>
+						</div>
+					</form>
+				</section>
 			</div>
 			<!-- ./ container -->
+
+			<!-- FOOTER -->
+			<footer id="footer" class="footer">
+				<div class="container">
+					<div class="footer-body--top">
+						<h3 class="logo">Savory</h3>
+						<ul class="social-links">
+							<li>
+								<a href="#"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+					<span class="separator"></span>
+
+					<div class="footer-body--bottom">
+						<div class="about-footer">
+							<h3>About Us</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aut quam alias praesentium consequuntur,
+								mollitia distinctio dignissimos accusamus omnis ducimus!
+							</p>
+							<a href="#" class="footer-link">read more</a>
+						</div>
+						<div class="contact-footer">
+							<h3>Contact Info</h3>
+							<ul class="contact-footer--links">
+								<li class="contact-footer--links-item">
+									<span class="item-title">call:</span>
+									<span>+76 (094) 754 43 7I</span>
+								</li>
+								<li class="contact-footer--links-item">
+									<span class="item-title">write:</span>
+									<span>savory.restaurant@savory.com</span>
+								</li>
+								<li class="contact-footer--links-item">
+									<span class="item-title">find us:</span>
+									<span>800 BC, Vancouver, Canada</span>
+								</li>
+							</ul>
+						</div>
+						<div class="gallery-footer">
+							<h3>Gallery</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aut quam alias praesentium consequuntur,
+								mollitia distinctio dignissimos accusamus omnis ducimus!
+							</p>
+							<a href="#" class="footer-link">read more</a>
+						</div>
+					</div>
+
+					<span class="separator"></span>
+
+					<div class="copyright">
+						<p>
+							Built with <i class="fas fa-heart heart"></i> by
+							<a href="https://shamar-morrison.netlify.app/" class="portfolio-link" target="_blank">Shamar Morrison</a>. All
+							Rights Reserved.
+						</p>
+						<a href="#home" class="footer-link">back to top</a>
+					</div>
+				</div>
+			</footer>
 		</section>
+		<!-- ./ section__container -->
 	</body>
 
 	<!-- CUSTOM JS -->
