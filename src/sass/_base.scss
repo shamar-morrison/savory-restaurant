@@ -28,6 +28,7 @@ a,
 button,
 li,
 img,
+i,
 .btn,
 .btn-shadow::after,
 .navbar,
@@ -286,10 +287,6 @@ h6 {
 	position: relative;
 	height: 100vh;
 	width: 100vw;
-	background-image: url(../img/banner-2.jpg);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: 0 -150px;
 
 	&--flex {
 		display: flex;
@@ -301,6 +298,34 @@ h6 {
 
 	.hero__content--message {
 		padding-top: 20px;
+	}
+
+	.home-bg {
+		position: absolute;
+		// z-index: -9999;
+		height: 100%;
+		width: 100%;
+
+		&.img-1 {
+			background-image: url(../img/banner-1.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: 0 -150px;
+		}
+
+		&.img-2 {
+			background-image: url(../img/banner-2.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: 0 -150px;
+		}
+
+		&.img-3 {
+			background-image: url(../img/banner-3.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: 0 -150px;
+		}
 	}
 }
 
@@ -350,6 +375,7 @@ h6 {
 			text-align: center;
 			margin: auto;
 			transform: translateX(0);
+			padding-bottom: 15px;
 		}
 
 		&::before {
@@ -401,10 +427,6 @@ h6 {
 		color: #fff;
 		cursor: pointer;
 	}
-}
-
-.top__section {
-	transform: translateY(-4vh);
 }
 
 // SECTION CONTAINER
@@ -472,6 +494,11 @@ h6 {
 	}
 }
 
+.top__section {
+	padding: 70px 0 30px;
+	transform: translateY(-4vh);
+}
+
 // ABOUT
 .about-img {
 	max-height: 575px;
@@ -510,6 +537,11 @@ h6 {
 		@include media-breakpoint-down(lg) {
 			margin: auto;
 		}
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			font-size: 2.2rem;
+		}
 	}
 
 	&--message {
@@ -518,6 +550,10 @@ h6 {
 
 		@include media-breakpoint-down(lg) {
 			margin: 25px auto auto;
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
 		}
 	}
 
@@ -529,6 +565,11 @@ h6 {
 
 		@include media-breakpoint-down(lg) {
 			justify-content: center;
+		}
+
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+			gap: 10px;
 		}
 	}
 
@@ -575,6 +616,10 @@ h6 {
 		font-size: 3rem;
 		margin-top: 10px;
 
+		@include media-breakpoint-down(md) {
+			font-size: 2.3rem;
+		}
+
 		&.reviews {
 			margin-top: 0;
 		}
@@ -588,6 +633,10 @@ h6 {
 
 		@media screen and (max-width: 950px) {
 			width: 65%;
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
 		}
 	}
 }
@@ -757,6 +806,7 @@ h6 {
 
 		@include media-breakpoint-down(lg) {
 			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 
@@ -805,6 +855,11 @@ h6 {
 
 		@include media-breakpoint-down(lg) {
 			text-align: center;
+			font-size: 4.25rem;
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: 2.25rem;
 		}
 	}
 
@@ -832,6 +887,7 @@ h6 {
 		gap: 50px;
 		justify-content: center;
 		text-align: center;
+		margin-bottom: 0;
 	}
 
 	.day {
@@ -871,6 +927,11 @@ h6 {
 				text-align: center;
 				margin: auto;
 			}
+
+			@include media-breakpoint-down(md) {
+				width: 100%;
+				font-size: 2.2rem;
+			}
 		}
 
 		&--msg {
@@ -886,6 +947,10 @@ h6 {
 				margin: auto;
 				margin-top: 30px;
 			}
+
+			@include media-breakpoint-down(md) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -898,6 +963,11 @@ h6 {
 			max-width: 400px;
 			object-fit: cover;
 			transform: translate(20%, -8%);
+
+			@include media-breakpoint-down(md) {
+				max-width: 300px;
+				transform: translate(5%, -20%);
+			}
 		}
 	}
 
@@ -912,6 +982,11 @@ h6 {
 			@include media-breakpoint-down(xl) {
 				max-width: 500px;
 			}
+
+			@include media-breakpoint-down(md) {
+				max-width: 350px;
+				transform: translate(0%, -25%);
+			}
 		}
 	}
 
@@ -920,10 +995,16 @@ h6 {
 
 		@include media-breakpoint-down(lg) {
 			flex-wrap: wrap;
+			justify-content: center;
+			gap: 140px;
 		}
 
 		> * {
 			flex-basis: 100%;
+
+			@include media-breakpoint-down(lg) {
+				flex-basis: auto;
+			}
 		}
 	}
 
@@ -1236,6 +1317,19 @@ h6 {
 	@include media-breakpoint-down(xl) {
 		top: -22%;
 	}
+
+	@include media-breakpoint-down(lg) {
+		top: -30%;
+		right: 5%;
+	}
+
+	@include media-breakpoint-down(md) {
+		top: -25%;
+	}
+
+	@media screen and (max-width: 370px) {
+		top: -22%;
+	}
 }
 
 .content__body {
@@ -1331,6 +1425,11 @@ h6 {
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 20px;
+
+	@include media-breakpoint-down(md) {
+		flex-direction: column-reverse;
+		gap: 35px;
+	}
 }
 
 .hover-white {
@@ -1372,12 +1471,30 @@ h6 {
 		font-weight: 800;
 		font-size: 0.7rem;
 		margin-bottom: 0;
+
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 	}
 
 	.slider__nav--btns {
-		font-size: 1.7rem;
-		color: $clr-primary;
+		display: flex;
+		gap: 5px;
+		align-items: center;
 		cursor: pointer;
+
+		i {
+			font-size: 0.875rem;
+			padding: 10px;
+			border-radius: 50%;
+			background-color: $clr-primary;
+			color: #fff;
+
+			&:hover,
+			&:focus {
+				background-color: darken($clr-primary, 5%);
+			}
+		}
 	}
 }
 
@@ -1392,6 +1509,10 @@ h6 {
 	&--container {
 		display: flex;
 		gap: 40px;
+
+		@include media-breakpoint-down(lg) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&--body {
@@ -1459,6 +1580,13 @@ h6 {
 		align-items: center;
 		margin-top: 70px;
 
+		@include media-breakpoint-down(lg) {
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+			gap: 20px;
+		}
+
 		.footer-msg {
 			color: darken($text-clr-primary, 50%);
 			margin-bottom: 0;
@@ -1487,6 +1615,14 @@ h6 {
 
 	.section__header--title {
 		font-size: 4.25rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 3rem;
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: 2.3rem;
+		}
 	}
 
 	&::before {
@@ -1514,10 +1650,22 @@ h6 {
 			align-items: center;
 			justify-content: center;
 			gap: 15px;
+
+			@media screen and (max-width: 520px) {
+				flex-direction: column;
+			}
 		}
 
 		input {
 			flex-basis: 30%;
+
+			@include media-breakpoint-down(lg) {
+				flex-basis: 60%;
+			}
+
+			@media screen and (max-width: 520px) {
+				width: 90%;
+			}
 		}
 	}
 }
@@ -1547,6 +1695,12 @@ h6 {
 		gap: 30px;
 		justify-content: center;
 		align-items: center;
+
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+			justify-content: normal;
+			align-items: normal;
+		}
 	}
 
 	&--msg {
@@ -1597,6 +1751,10 @@ h6 {
 		display: flex;
 		gap: 45px;
 
+		@include media-breakpoint-down(lg) {
+			flex-wrap: wrap;
+		}
+
 		h3 {
 			font-size: 1.5rem;
 			margin-bottom: 30px;
@@ -1618,6 +1776,12 @@ h6 {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 15px;
+
+	@media screen and (max-width: 530px) {
+		flex-direction: column;
+		gap: 20px;
+		text-align: center;
+	}
 
 	p {
 		opacity: 0.6;

@@ -12454,45 +12454,25 @@ var swiperOptions = {
     nextEl: '.slider__nav-next',
     prevEl: '.slider__nav-prev'
   },
-  spaceBetween: 30,
+  spaceBetween: 10,
   // px
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 1,
   centeredSlides: true,
   slideActiveClass: 'active-test',
-  speed: 750
-}; // options for hero slider
+  speed: 750,
+  //breakpoints
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30 // px
 
-var heroSwiperOptions = {
-  direction: 'horizontal',
-  speed: 800,
-  pagination: {
-    el: '.hero__slider-nav--dots',
-    type: 'bullets',
-    bulletElement: 'li',
-    bulletClass: 'hero-nav-dot',
-    bulletActiveClass: 'hero-nav-dot-active',
-    clickable: true
-  },
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  navigationArrows: {
-    nextEl: '.hero-slider-right',
-    prevEl: '.hero-slider-left'
-  },
-  parallax: true,
-  autoplay: {
-    delay: 5000
+    }
   }
 }; // init review slider
 
 var swiper = new _bundle.default('.reviews__content', swiperOptions);
-reviewsContent.swiper; // init hero slider
-
-var heroSwiper = new _bundle.default('.hero__swiper', heroSwiperOptions);
-heroSwiper.swiper; // review slider nav btns
+reviewsContent.swiper; // review slider nav btns
 
 sliderNavBtns.addEventListener('click', function (event) {
   var navTo = event.target.dataset.to;
@@ -12547,7 +12527,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50122" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49796" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

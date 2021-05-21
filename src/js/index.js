@@ -210,47 +210,24 @@ const swiperOptions = {
 		nextEl: '.slider__nav-next',
 		prevEl: '.slider__nav-prev',
 	},
-	spaceBetween: 30, // px
+	spaceBetween: 10, // px
 	loop: true,
-	slidesPerView: 3,
+	slidesPerView: 1,
 	centeredSlides: true,
 	slideActiveClass: 'active-test',
 	speed: 750,
-};
-
-// options for hero slider
-const heroSwiperOptions = {
-	direction: 'horizontal',
-	speed: 800,
-	pagination: {
-		el: '.hero__slider-nav--dots',
-		type: 'bullets',
-		bulletElement: 'li',
-		bulletClass: 'hero-nav-dot',
-		bulletActiveClass: 'hero-nav-dot-active',
-		clickable: true,
-	},
-	effect: 'fade',
-	fadeEffect: {
-		crossFade: true,
-	},
-	navigationArrows: {
-		nextEl: '.hero-slider-right',
-		prevEl: '.hero-slider-left',
-	},
-	parallax: true,
-	autoplay: {
-		delay: 5000,
+	//breakpoints
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 30, // px
+		},
 	},
 };
 
 // init review slider
 const swiper = new Swiper('.reviews__content', swiperOptions);
 reviewsContent.swiper;
-
-// init hero slider
-const heroSwiper = new Swiper('.hero__swiper', heroSwiperOptions);
-heroSwiper.swiper;
 
 // review slider nav btns
 sliderNavBtns.addEventListener('click', event => {

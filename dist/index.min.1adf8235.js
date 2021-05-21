@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\img\\bg.jpg":[["bg.7597a4f5.jpg","src/img/bg.jpg"],"src/img/bg.jpg"],"./..\\img\\banner-2.jpg":[["banner-2.9e26a480.jpg","src/img/banner-2.jpg"],"src/img/banner-2.jpg"],"./..\\img\\opening-hours.jpg":[["opening-hours.4fa30716.jpg","src/img/opening-hours.jpg"],"src/img/opening-hours.jpg"],"./..\\img\\newsletter.jpg":[["newsletter.640bba73.jpg","src/img/newsletter.jpg"],"src/img/newsletter.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\img\\bg.jpg":[["bg.7597a4f5.jpg","src/img/bg.jpg"],"src/img/bg.jpg"],"./..\\img\\banner-1.jpg":[["banner-1.b47852fb.jpg","src/img/banner-1.jpg"],"src/img/banner-1.jpg"],"./..\\img\\banner-2.jpg":[["banner-2.9e26a480.jpg","src/img/banner-2.jpg"],"src/img/banner-2.jpg"],"./..\\img\\banner-3.jpg":[["banner-3.c0e50485.jpg","src/img/banner-3.jpg"],"src/img/banner-3.jpg"],"./..\\img\\opening-hours.jpg":[["opening-hours.4fa30716.jpg","src/img/opening-hours.jpg"],"src/img/opening-hours.jpg"],"./..\\img\\newsletter.jpg":[["newsletter.640bba73.jpg","src/img/newsletter.jpg"],"src/img/newsletter.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50122" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49796" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
