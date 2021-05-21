@@ -38,7 +38,11 @@
 
 		<!-- HOME -->
 		<header id="home" class="section__home">
-			<div class="home-bg img-1"></div>
+			<!-- BG IMAGES -->
+			<div class="img-3 not-active-bg-img"></div>
+			<div class="img-1 not-active-bg-img"></div>
+			<div class="img-2 active-bg-img"></div>
+			<!-- BG OVERLAY -->
 			<div class="hero-overlay"></div>
 			<div class="container">
 				<div class="section__home--flex">
@@ -46,7 +50,7 @@
 						<!-- HERO CONTENT -->
 						<div class="hero__content">
 							<!-- SLIDER 1 -->
-							<div class="swiper-slide">
+							<div class="slide-one slide-active">
 								<p class="hero__content--intro-left">hey, there!</p>
 								<h3 class="hero__content--title">Welcome back to Savory.</h3>
 								<p class="hero__content--message">
@@ -59,7 +63,7 @@
 							</div>
 
 							<!-- SLIDER 2 -->
-							<!-- <div class="swiper-slide">
+							<div class="slide-two slide-not-active-pos">
 								<p class="hero__content--intro-left">hey, there!</p>
 								<h3 class="hero__content--title">Reserve your table.</h3>
 								<p class="hero__content--message">
@@ -69,7 +73,7 @@
 									<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
 									<button class="btn btn-lg btn-trans">view menu</button>
 								</div>
-							</div> -->
+							</div>
 
 							<!-- SLIDER NAV -->
 							<div class="hero__slider-nav">
@@ -80,10 +84,10 @@
 									<li class="hero-nav-dot"></li>
 								</ul>
 								<!-- SLIDER ARROWS -->
-								<div class="hero__slider-nav--arrows">
+								<!-- <div class="hero__slider-nav--arrows">
 									<span class="hero-slider-left"><i class="fas fa-arrow-left"></i></span>
 									<span class="hero-slider-right"><i class="fas fa-arrow-right"></i></span>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -99,12 +103,12 @@
 			<div class="modal-content">
 				<span class="close-modal"><i class="fas fa-times-circle"></i></span>
 				<h3 class="modal-content--title">Table Reservation</h3>
-				<form class="modal-content--form">
+				<form action="submit" class="modal-content--form">
 					<div class="form-row">
-						<input type="text" name="first-name" placeholder="First Name">
-						<input type="text" name="last-name" placeholder="Last Name">
-						<input type="number" name="phone" placeholder="Tel. Num">
-						<select name="Persons" placeholder="No. Persons">
+						<input type="text" name="first-name" placeholder="First Name" required="">
+						<input type="text" name="last-name" placeholder="Last Name" required="">
+						<input type="number" name="phone" placeholder="Tel. Num" required="">
+						<select name="Persons" placeholder="No. Persons" required="">
 							<option value="1 Person">1 Person</option>
 							<option value="2 Person">2 Persons</option>
 							<option value="3 Person">3 Persons</option>
@@ -112,13 +116,13 @@
 							<option value="5 Person">5 Persons</option>
 							<option value="6 or more Persons">6 or more Persons</option>
 						</select>
-						<input type="date" size="5" name="date" placeholder="Date">
-						<input type="time" name="time">
+						<input type="date" size="5" name="date" placeholder="Date" required="">
+						<input type="time" name="time" required="">
 					</div>
 
 					<!-- MESSAGE -->
 					<div class="msg-wrapper">
-						<textarea name="message" id="reservation-msg" placeholder="Write a message..." rows="3"></textarea>
+						<textarea name="message" id="reservation-msg" placeholder="Write a message..." rows="3" required=""></textarea>
 					</div>
 					<!-- BUTTON -->
 					<button class="btn btn-lg reserve-table">reserve a table</button>

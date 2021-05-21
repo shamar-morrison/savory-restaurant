@@ -12436,7 +12436,7 @@ menuBtns.addEventListener('click', function (event) {
   }
 });
 /**
- * HERO SECTION & REVIEW SECTION SLIDER
+ * REVIEW SECTION SLIDER
  */
 // options for review slider
 
@@ -12495,10 +12495,75 @@ var toggleMobileMenu = function toggleMobileMenu() {
     mobileToggle.classList.add('open');
     mobileToggle.classList.remove('closed');
   }
-}; // MOBILE MENU
-
+};
 
 mobileToggle.addEventListener('click', toggleMobileMenu);
+/**
+ * HERO SECTION ANIM
+ */
+
+var imgOne = document.querySelector('.img-1');
+var imgTwo = document.querySelector('.img-2');
+var imgThree = document.querySelector('.img-3'); // image anim
+
+var animBgImages = function animBgImages() {
+  if (imgTwo.classList.contains('active-bg-img')) {
+    imgTwo.classList.remove('active-bg-img');
+    imgTwo.classList.add('not-active-bg-img');
+    imgThree.classList.add('active-bg-img');
+  } else if (imgOne.classList.contains('active-bg-img')) {
+    imgOne.classList.remove('active-bg-img');
+    imgOne.classList.add('not-active-bg-img');
+    imgTwo.classList.add('active-bg-img');
+  } else if (imgThree.classList.contains('active-bg-img')) {
+    imgThree.classList.remove('active-bg-img');
+    imgThree.classList.add('not-active-bg-img');
+    imgOne.classList.add('active-bg-img');
+  }
+};
+
+setInterval(animBgImages, 5000); // text anim
+
+var heroSlideOne = document.querySelector('.slide-one');
+var heroSlideTwo = document.querySelector('.slide-two');
+
+var animHeroSlideText = function animHeroSlideText() {
+  if (heroSlideOne.classList.contains('slide-active')) {
+    // change to slide two
+    heroSlideTwo.classList.add('slide-active-pos');
+    heroSlideTwo.classList.remove('slide-not-active-pos');
+    heroSlideOne.classList.remove('slide-active');
+    heroSlideOne.classList.add('slide-not-active');
+  } else {
+    // change to slide two
+    heroSlideOne.classList.add('slide-active');
+    heroSlideOne.classList.remove('slide-not-active');
+    heroSlideTwo.classList.remove('slide-active-pos');
+    heroSlideTwo.classList.add('slide-not-active-pos');
+  }
+};
+
+setInterval(animHeroSlideText, 5000);
+/**
+ * MODAL RESERVE BUTTON ANIM
+ */
+
+var modalBtn = document.querySelector('.reserve-table');
+var modalForm = document.querySelector('.modal-content--form'); // fake table reservation
+
+modalForm.onsubmit = function (event) {
+  event.preventDefault();
+  modalBtn.textContent = 'Reserving Table...';
+  modalBtn.style.pointerEvents = 'none';
+  setTimeout(function () {
+    modalBtn.textContent = 'Your table has been reserved :)';
+    modalBtn.style.pointerEvents = 'none';
+  }, 2000);
+  setTimeout(function () {
+    modalBtn.textContent = 'reserve a table';
+    modalBtn.style.pointerEvents = 'auto';
+  }, 6000);
+};
 },{"swiper/bundle":"node_modules/swiper/swiper-bundle.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -12527,7 +12592,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49796" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52736" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

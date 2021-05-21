@@ -42,3 +42,19 @@
 	background-color: $clr-primary;
 	border-radius: $border-radius;
 }
+
+@mixin hero-img {
+	position: absolute;
+	// z-index: -9999;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0 -150px;
+	transition-duration: 1500ms;
+
+	@media screen and (max-width: 1200px) {
+		background-size: calc(100vw + 150px);
+		background-position: center center;
+	}
+}

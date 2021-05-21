@@ -192,7 +192,7 @@ menuBtns.addEventListener('click', event => {
 });
 
 /**
- * HERO SECTION & REVIEW SECTION SLIDER
+ * REVIEW SECTION SLIDER
  */
 
 // options for review slider
@@ -258,5 +258,80 @@ const toggleMobileMenu = function () {
 	}
 };
 
-// MOBILE MENU
 mobileToggle.addEventListener('click', toggleMobileMenu);
+
+/**
+ * HERO SECTION ANIM
+ */
+
+const imgOne = document.querySelector('.img-1');
+const imgTwo = document.querySelector('.img-2');
+const imgThree = document.querySelector('.img-3');
+
+// image anim
+const animBgImages = function () {
+	if (imgTwo.classList.contains('active-bg-img')) {
+		imgTwo.classList.remove('active-bg-img');
+		imgTwo.classList.add('not-active-bg-img');
+
+		imgThree.classList.add('active-bg-img');
+	} else if (imgOne.classList.contains('active-bg-img')) {
+		imgOne.classList.remove('active-bg-img');
+		imgOne.classList.add('not-active-bg-img');
+
+		imgTwo.classList.add('active-bg-img');
+	} else if (imgThree.classList.contains('active-bg-img')) {
+		imgThree.classList.remove('active-bg-img');
+		imgThree.classList.add('not-active-bg-img');
+
+		imgOne.classList.add('active-bg-img');
+	}
+};
+setInterval(animBgImages, 5000);
+
+// text anim
+const heroSlideOne = document.querySelector('.slide-one');
+const heroSlideTwo = document.querySelector('.slide-two');
+
+const animHeroSlideText = function () {
+	if (heroSlideOne.classList.contains('slide-active')) {
+		// change to slide two
+		heroSlideTwo.classList.add('slide-active-pos');
+		heroSlideTwo.classList.remove('slide-not-active-pos');
+
+		heroSlideOne.classList.remove('slide-active');
+		heroSlideOne.classList.add('slide-not-active');
+	} else {
+		// change to slide two
+		heroSlideOne.classList.add('slide-active');
+		heroSlideOne.classList.remove('slide-not-active');
+
+		heroSlideTwo.classList.remove('slide-active-pos');
+		heroSlideTwo.classList.add('slide-not-active-pos');
+	}
+};
+setInterval(animHeroSlideText, 5000);
+
+/**
+ * MODAL RESERVE BUTTON ANIM
+ */
+
+const modalBtn = document.querySelector('.reserve-table');
+const modalForm = document.querySelector('.modal-content--form');
+
+// fake table reservation
+modalForm.onsubmit = event => {
+	event.preventDefault();
+	modalBtn.textContent = 'Reserving Table...';
+	modalBtn.style.pointerEvents = 'none';
+
+	setTimeout(() => {
+		modalBtn.textContent = 'Your table has been reserved :)';
+		modalBtn.style.pointerEvents = 'none';
+	}, 2000);
+
+	setTimeout(() => {
+		modalBtn.textContent = 'reserve a table';
+		modalBtn.style.pointerEvents = 'auto';
+	}, 6000);
+};

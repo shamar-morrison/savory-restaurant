@@ -38,6 +38,11 @@ i,
 	transition-property: background-color, opacity, transform, color, border-radius;
 }
 
+.img-1,
+.img-2,
+.img-3,
+.slide-one,
+.slide-two,
 .modal,
 .modal-overlay,
 .modal-content {
@@ -218,7 +223,6 @@ h6 {
 	}
 
 	@media screen and (max-width: $mobile-menu) {
-		// display: none;
 		width: 100%;
 		padding: 20px 0;
 		border-radius: 10px;
@@ -300,34 +304,57 @@ h6 {
 		padding-top: 20px;
 	}
 
-	.home-bg {
-		position: absolute;
-		// z-index: -9999;
-		height: 100%;
-		width: 100%;
+	.img-1 {
+		@include hero-img;
+		background-image: url(../img/banner-1.jpg);
+	}
 
-		&.img-1 {
-			background-image: url(../img/banner-1.jpg);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-position: 0 -150px;
-		}
+	.img-2 {
+		@include hero-img;
+		background-image: url(../img/banner-2.jpg);
+	}
 
-		&.img-2 {
-			background-image: url(../img/banner-2.jpg);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-position: 0 -150px;
-		}
-
-		&.img-3 {
-			background-image: url(../img/banner-3.jpg);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-position: 0 -150px;
-		}
+	.img-3 {
+		@include hero-img;
+		background-image: url(../img/banner-3.jpg);
 	}
 }
+
+// HERO SLIDE
+.slide-two {
+	position: absolute;
+}
+
+.not-active-bg-img {
+	transform: translate(-5%, -5%) scale(1.1);
+	opacity: 0;
+}
+
+.active-bg-img {
+	opacity: 1;
+	transform: translate(0, 0) scale(1);
+}
+
+.slide-not-active-pos {
+	transform: translate(15%, -100%) scale(0.85);
+	opacity: 0;
+}
+
+.slide-active-pos {
+	transform: translate(0, -100%) scale(1);
+	opacity: 1;
+}
+
+.slide-active {
+	transform: translate(0, 0) scale(1);
+	opacity: 1;
+}
+
+.slide-not-active {
+	transform: translate(15%, 15%) scale(0.85);
+	opacity: 0;
+}
+// END HERO SLIDE
 
 .hero-overlay {
 	position: absolute;
