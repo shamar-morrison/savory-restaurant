@@ -5,7 +5,7 @@ if (module.hot) {
 }
 
 /**
- * Swiper Slider
+ * SWIPER SLIDER
  */
 
 // core version + navigation, pagination modules:
@@ -13,8 +13,11 @@ import Swiper from 'swiper/bundle';
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
 
-// configure Swiper to use modules
-// SwiperCore.use([Navigation, Pagination]);
+/**
+ * LIGHTBOX
+ */
+
+import fslightbox from '../../node_modules/fslightbox/index';
 
 const mainFoods = document.querySelector('[data-target="main"]');
 const sidesFoods = document.querySelector('[data-target="sides"]');
@@ -39,13 +42,23 @@ const mobileToggle = document.querySelector('.mobile-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 /**
- * Init menu navigation
+ * Init
  */
 window.onload = function () {
 	// prepare menu section
 	sidesFoods.style.transform = 'translateY(-100%) scale(0.95)';
 	drinksFoods.style.transform = 'translateY(-100%) scale(0.95)';
 	desertsFoods.style.transform = 'translateY(-100%) scale(0.95)';
+
+	// init hero slider
+	setInterval(() => {
+		animHeroSlideText();
+		animBgImages();
+	}, 5000);
+
+	// init review slider quote icon anim
+	document.querySelector('.quote-icon').style.transition = '500ms cubic-bezier(0.25, 0.8, 0.25, 1)';
+	document.querySelector('.quote-icon').style.transitionProperty = 'opacity, transform';
 };
 
 // sticky navbar anim
@@ -237,6 +250,17 @@ sliderNavBtns.addEventListener('click', event => {
 	else swiper.slideNext();
 });
 
+// animate quote icon
+swiper.on('slideChangeTransitionStart', () => {
+	document.querySelector('.quote-icon').style.transform = 'translateY(-25%)';
+	document.querySelector('.quote-icon').style.opacity = '0';
+});
+
+swiper.on('slideChangeTransitionEnd', () => {
+	document.querySelector('.quote-icon').style.transform = 'translateY(0)';
+	document.querySelector('.quote-icon').style.opacity = '1';
+});
+
 // toggle mobile menu
 const toggleMobileMenu = function () {
 	if (mobileToggle.classList.contains('open')) {
@@ -287,30 +311,36 @@ const animBgImages = function () {
 		imgOne.classList.add('active-bg-img');
 	}
 };
-setInterval(animBgImages, 5000);
 
 // text anim
 const heroSlideOne = document.querySelector('.slide-one');
 const heroSlideTwo = document.querySelector('.slide-two');
+const heroSlideThree = document.querySelector('.slide-three');
 
 const animHeroSlideText = function () {
 	if (heroSlideOne.classList.contains('slide-active')) {
-		// change to slide two
+		// change from slide one to slide two
 		heroSlideTwo.classList.add('slide-active-pos');
 		heroSlideTwo.classList.remove('slide-not-active-pos');
 
 		heroSlideOne.classList.remove('slide-active');
 		heroSlideOne.classList.add('slide-not-active');
-	} else {
-		// change to slide two
-		heroSlideOne.classList.add('slide-active');
-		heroSlideOne.classList.remove('slide-not-active');
+	} else if (heroSlideTwo.classList.contains('slide-active-pos')) {
+		// change from slide two to slide three
+		heroSlideThree.classList.add('slide-active-pos');
+		heroSlideThree.classList.remove('slide-not-active-pos');
 
 		heroSlideTwo.classList.remove('slide-active-pos');
 		heroSlideTwo.classList.add('slide-not-active-pos');
+	} else {
+		// change from slide three back to slide one
+		heroSlideOne.classList.add('slide-active');
+		heroSlideOne.classList.remove('slide-not-active');
+
+		heroSlideThree.classList.remove('slide-active-pos');
+		heroSlideThree.classList.add('slide-not-active-pos');
 	}
 };
-setInterval(animHeroSlideText, 5000);
 
 /**
  * MODAL RESERVE BUTTON ANIM
@@ -335,3 +365,9 @@ modalForm.onsubmit = event => {
 		modalBtn.style.pointerEvents = 'auto';
 	}, 6000);
 };
+
+/**
+ * LIGHTBOX
+ */
+
+// lightbox video player
