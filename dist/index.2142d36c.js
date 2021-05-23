@@ -470,6 +470,8 @@ const mobileToggle = document.querySelector('.mobile-toggle');
 const navLinks = document.querySelector('.nav-links');
 const quoteIcon = document.querySelector('.quote-icon');
 const heroSliderNavBullets = document.querySelector('.hero__slider-nav--dots');
+const pauseHeroSliderBtn = document.querySelector('.btn-pause-slider');
+let isHeroSliderPaused = false;
 /**
 * Init
 */
@@ -480,6 +482,7 @@ window.onload = function () {
   desertsFoods.style.transform = 'translateY(-100%) scale(0.95)';
   // init hero slider
   setInterval(() => {
+    if (isHeroSliderPaused) return;
     animHeroSlideText();
     animBgImages();
   }, 5000);
@@ -718,6 +721,23 @@ const animBgImages = function () {
 const heroSlideOne = document.querySelector('.slide-one');
 const heroSlideTwo = document.querySelector('.slide-two');
 const heroSlideThree = document.querySelector('.slide-three');
+const updateSliderBullet = function (slide) {
+  document.querySelector('.hero-nav-dot-active').classList.remove('hero-nav-dot-active');
+  document.querySelector(`[data-slide-to=${slide}]`).classList.add('hero-nav-dot-active');
+};
+// pause/resume hero slider
+const pauseHeroSlider = () => {
+  isHeroSliderPaused = !isHeroSliderPaused;
+  // update icon
+  if (isHeroSliderPaused) {
+    pauseHeroSliderBtn.textContent = '';
+    pauseHeroSliderBtn.insertAdjacentHTML('afterbegin', '<i class="fas fa-play pause-slider"></i>');
+    return;
+  }
+  pauseHeroSliderBtn.textContent = '';
+  pauseHeroSliderBtn.insertAdjacentHTML('afterbegin', '<i class="fas fa-pause pause-slider"></i>');
+};
+pauseHeroSliderBtn.addEventListener('click', pauseHeroSlider);
 /**
 * Animate text slides for hero (home section)
 *
@@ -738,14 +758,17 @@ const animHeroSlideText = function () {
     // change from slide one to slide two
     makeTextSlideActive(heroSlideTwo);
     makeTextSlideNotActive(heroSlideOne, true);
+    updateSliderBullet('slide-two');
   } else if (heroSlideTwo.classList.contains('slide-active-pos')) {
     // change from slide two to slide three
     makeTextSlideActive(heroSlideThree);
     makeTextSlideNotActive(heroSlideTwo);
+    updateSliderBullet('slide-three');
   } else {
     // change from slide three back to slide one
     makeTextSlideActive(heroSlideOne, true);
     makeTextSlideNotActive(heroSlideThree);
+    updateSliderBullet('slide-one');
   }
 };
 // Hero Slider nav bullets
@@ -753,26 +776,48 @@ heroSliderNavBullets.addEventListener('click', event => {
   if (!event.target.dataset.slideTo) return;
   const slide = event.target.dataset.slideTo;
   switch (slide) {
-    case 'slide-1':
+    case 'slide-one':
       {
-        // if current slide === slide-1, don't switch slides
-        if (document.querySelector('.slide-active')) return;
-        // make text slide-1 active
+        // if slide-one is current slide, don't switch slides
+        if (heroSlideOne.classList.contains('slide-active')) return;
+        // make hero slide-one active
         makeTextSlideActive(heroSlideOne, true);
         makeTextSlideNotActive(document.querySelector('.slide-active-pos'));
         // make img-1 active
         removeActiveImg(document.querySelector('.active-bg-img'));
         addActiveImg(imgOne);
+        updateSliderBullet('slide-one');
         break;
       }
-    case 'slide-2':
+    case 'slide-two':
       {
-        console.log('slide-2');
+        if (heroSlideTwo.classList.contains('slide-active-pos')) return;
+        // make hero slide-2 active
+        makeTextSlideActive(heroSlideTwo);
+        // if slide-one was previous slide
+        if (heroSlideOne.classList.contains('slide-active')) {
+          makeTextSlideNotActive(heroSlideOne, true);
+        } else {
+          makeTextSlideNotActive(heroSlideThree);
+        }
+        // make img-2 active
+        removeActiveImg(document.querySelector('.active-bg-img'));
+        addActiveImg(imgTwo);
+        updateSliderBullet('slide-two');
         break;
       }
-    case 'slide-3':
+    case 'slide-three':
       {
-        console.log('slide-3');
+        if (heroSlideThree.classList.contains('slide-active-pos')) return;
+        makeTextSlideActive(heroSlideThree);
+        if (heroSlideOne.classList.contains('slide-active')) {
+          makeTextSlideNotActive(heroSlideOne, true);
+        } else {
+          makeTextSlideNotActive(heroSlideTwo);
+        }
+        removeActiveImg(document.querySelector('.active-bg-img'));
+        addActiveImg(imgThree);
+        updateSliderBullet('slide-three');
         break;
       }
     default:

@@ -255,6 +255,7 @@ h6 {
 	li {
 		cursor: pointer;
 		position: relative;
+		// padding: 15px 25px;
 
 		&:hover {
 			color: $text-clr-primary !important;
@@ -306,7 +307,7 @@ h6 {
 		display: flex;
 
 		&-one {
-			flex-basis: 50%;
+			flex-basis: 100%;
 		}
 	}
 
@@ -434,12 +435,13 @@ h6 {
 .hero__slider-nav {
 	display: flex;
 	height: 100%;
-	margin-top: 55px;
+	margin-top: 45px;
 	gap: 60px;
 	align-items: center;
 
 	&--dots {
 		display: flex;
+		align-items: center;
 		gap: 18px;
 		margin-bottom: 0;
 
@@ -455,6 +457,15 @@ h6 {
 				border: 3px solid $clr-primary;
 				transform: scale(1.6);
 			}
+		}
+
+		.pause-slider {
+			color: #fff;
+			font-size: 0.9rem;
+			background-color: $clr-primary;
+			padding: 10px;
+			border-radius: 50%;
+			cursor: pointer;
 		}
 	}
 
@@ -1261,7 +1272,8 @@ h6 {
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: 50px;
+		gap: 10px;
+
 		font-size: 0.675rem;
 		font-weight: 800;
 		text-transform: uppercase;
@@ -1269,6 +1281,10 @@ h6 {
 		margin-top: 40px;
 		margin-bottom: 0;
 		letter-spacing: 2px;
+
+		li {
+			padding: 15px 25px;
+		}
 	}
 
 	.selected {
