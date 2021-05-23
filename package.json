@@ -2,19 +2,18 @@
 	"name": "savory-restaurant",
 	"version": "1.0.0",
 	"description": "A healthy and eco-friendly resturant for the entire family",
-	"main": "index.html",
+	"default": "index.html",
 	"homepage": ".",
 	"scripts": {
 		"start": "parcel index.html",
-		"build": "parcel build index.html --dist-dir ./dist"
+		"build": "parcel build index.html --dist-dir ./build"
 	},
 	"keywords": [],
 	"author": "Shamar Morrison",
 	"license": "ISC",
 	"browserslist": [
 		">0.2%",
-		"not dead",
-		"not op_mini all"
+		"not dead"
 	],
 	"devDependencies": {
 		"fslightbox": "^3.2.3",

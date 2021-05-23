@@ -547,6 +547,17 @@ h6 {
 }
 
 // ABOUT
+#about {
+	&::before {
+		content: '';
+		display: block;
+		margin-top: -130px;
+		height: 130px;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
 .about-img {
 	position: relative;
 	max-height: 575px;
@@ -602,7 +613,7 @@ h6 {
 }
 
 .about__content {
-	padding: 15% 0;
+	padding: 12% 0;
 
 	@include media-breakpoint-down(lg) {
 		text-align: center;
@@ -1584,6 +1595,17 @@ h6 {
 
 // COOKING TIPS & RECIPES
 
+#cooking-tips {
+	&::before {
+		content: '';
+		display: block;
+		margin-top: -150px;
+		height: 150px;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
 .cooking-tips {
 	&--container {
 		display: flex;
@@ -1591,6 +1613,10 @@ h6 {
 
 		@include media-breakpoint-down(lg) {
 			flex-wrap: wrap;
+		}
+
+		> * {
+			flex-basis: 100%;
 		}
 	}
 
@@ -1751,6 +1777,17 @@ h6 {
 
 // CONTACT
 
+#contact {
+	&::before {
+		content: '';
+		display: block;
+		margin-top: -150px;
+		height: 150px;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
 .contact-form {
 	&--body {
 		display: flex;
@@ -1830,6 +1867,10 @@ h6 {
 		display: flex;
 		gap: 45px;
 
+		> * {
+			flex-basis: 100%;
+		}
+
 		@include media-breakpoint-down(lg) {
 			flex-wrap: wrap;
 		}
@@ -1847,6 +1888,10 @@ h6 {
 		font-size: 0.65rem;
 		color: $clr-article;
 		font-weight: 700;
+	}
+
+	.text-justify {
+		text-align: justify;
 	}
 }
 

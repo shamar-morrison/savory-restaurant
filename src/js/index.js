@@ -41,6 +41,10 @@ const modal = document.querySelector('.modal');
 const mobileToggle = document.querySelector('.mobile-toggle');
 const navLinks = document.querySelector('.nav-links');
 
+const quoteIcon = document.querySelector('.quote-icon');
+
+const heroSliderNavBullets = document.querySelector('.hero__slider-nav--dots');
+
 /**
  * Init
  */
@@ -126,7 +130,7 @@ document.addEventListener('keydown', event => {
 });
 
 /**
- * Menu Animation
+ * MENU ANIMATION
  */
 
 // hide active food list
@@ -252,37 +256,54 @@ sliderNavBtns.addEventListener('click', event => {
 
 // animate quote icon
 swiper.on('slideChangeTransitionStart', () => {
-	document.querySelector('.quote-icon').style.transform = 'translateY(-25%)';
-	document.querySelector('.quote-icon').style.opacity = '0';
+	quoteIcon.style.transform = 'translateY(-25%)';
+	quoteIcon.style.opacity = '0';
 });
 
 swiper.on('slideChangeTransitionEnd', () => {
-	document.querySelector('.quote-icon').style.transform = 'translateY(0)';
-	document.querySelector('.quote-icon').style.opacity = '1';
+	quoteIcon.style.transform = 'translateY(0)';
+	quoteIcon.style.opacity = '1';
 });
+
+/**
+ * MOBILE MENU
+ */
+
+const closeMobileMenu = function () {
+	navLinks.style.opacity = 0;
+	navLinks.style.transform = 'translate(-50%, 40px)';
+	navLinks.style.pointerEvents = 'none';
+
+	mobileToggle.classList.remove('open');
+	mobileToggle.classList.add('closed');
+};
+
+const openMobileMenu = function () {
+	navLinks.style.opacity = 1;
+	navLinks.style.transform = 'translate(-50%, 0)';
+	navLinks.style.pointerEvents = 'auto';
+
+	mobileToggle.classList.add('open');
+	mobileToggle.classList.remove('closed');
+};
 
 // toggle mobile menu
 const toggleMobileMenu = function () {
 	if (mobileToggle.classList.contains('open')) {
 		// close menu
-		navLinks.style.opacity = 0;
-		navLinks.style.transform = 'translate(-50%, 40px)';
-		navLinks.style.pointerEvents = 'none';
-
-		mobileToggle.classList.remove('open');
-		mobileToggle.classList.add('closed');
+		closeMobileMenu();
 	} else {
 		// open menu
-		navLinks.style.opacity = 1;
-		navLinks.style.transform = 'translate(-50%, 0)';
-		navLinks.style.pointerEvents = 'auto';
-
-		mobileToggle.classList.add('open');
-		mobileToggle.classList.remove('closed');
+		openMobileMenu();
 	}
 };
 
 mobileToggle.addEventListener('click', toggleMobileMenu);
+
+// close mobile menu on link click
+document.querySelector('.nav-links').addEventListener('click', () => {
+	if (mobileToggle.classList.contains('open')) closeMobileMenu();
+});
 
 /**
  * HERO SECTION ANIM
@@ -292,23 +313,28 @@ const imgOne = document.querySelector('.img-1');
 const imgTwo = document.querySelector('.img-2');
 const imgThree = document.querySelector('.img-3');
 
+// make BG image active
+const removeActiveImg = htmlEl => {
+	htmlEl.classList.remove('active-bg-img');
+	htmlEl.classList.add('not-active-bg-img');
+};
+
+// make BG image not active
+const addActiveImg = htmlEl => {
+	htmlEl.classList.add('active-bg-img');
+};
+
 // image anim
 const animBgImages = function () {
 	if (imgTwo.classList.contains('active-bg-img')) {
-		imgTwo.classList.remove('active-bg-img');
-		imgTwo.classList.add('not-active-bg-img');
-
-		imgThree.classList.add('active-bg-img');
+		removeActiveImg(imgTwo);
+		addActiveImg(imgThree);
 	} else if (imgOne.classList.contains('active-bg-img')) {
-		imgOne.classList.remove('active-bg-img');
-		imgOne.classList.add('not-active-bg-img');
-
-		imgTwo.classList.add('active-bg-img');
+		removeActiveImg(imgOne);
+		addActiveImg(imgTwo);
 	} else if (imgThree.classList.contains('active-bg-img')) {
-		imgThree.classList.remove('active-bg-img');
-		imgThree.classList.add('not-active-bg-img');
-
-		imgOne.classList.add('active-bg-img');
+		removeActiveImg(imgThree);
+		addActiveImg(imgOne);
 	}
 };
 
@@ -317,30 +343,72 @@ const heroSlideOne = document.querySelector('.slide-one');
 const heroSlideTwo = document.querySelector('.slide-two');
 const heroSlideThree = document.querySelector('.slide-three');
 
+/**
+ * Animate text slides for hero (home section)
+ *
+ * @param {} slide the slide to make active
+ * @param {boolean} isFirstSlide if true, slide === the initial starting slide when the site first loads
+ * in this case we want to add a different class to maintain slide position
+ */
+const makeTextSlideNotActive = (slide, isFirstSlide = false) => {
+	slide.classList.remove(`${isFirstSlide ? 'slide-active' : 'slide-active-pos'}`);
+	slide.classList.add(`${isFirstSlide ? 'slide-not-active' : 'slide-not-active-pos'}`);
+};
+
+const makeTextSlideActive = (slide, isFirstSlide = false) => {
+	slide.classList.add(`${isFirstSlide ? 'slide-active' : 'slide-active-pos'}`);
+	slide.classList.remove(`${isFirstSlide ? 'slide-not-active' : 'slide-not-active-pos'}`);
+};
+
 const animHeroSlideText = function () {
 	if (heroSlideOne.classList.contains('slide-active')) {
 		// change from slide one to slide two
-		heroSlideTwo.classList.add('slide-active-pos');
-		heroSlideTwo.classList.remove('slide-not-active-pos');
-
-		heroSlideOne.classList.remove('slide-active');
-		heroSlideOne.classList.add('slide-not-active');
+		makeTextSlideActive(heroSlideTwo);
+		makeTextSlideNotActive(heroSlideOne, true);
 	} else if (heroSlideTwo.classList.contains('slide-active-pos')) {
 		// change from slide two to slide three
-		heroSlideThree.classList.add('slide-active-pos');
-		heroSlideThree.classList.remove('slide-not-active-pos');
-
-		heroSlideTwo.classList.remove('slide-active-pos');
-		heroSlideTwo.classList.add('slide-not-active-pos');
+		makeTextSlideActive(heroSlideThree);
+		makeTextSlideNotActive(heroSlideTwo);
 	} else {
 		// change from slide three back to slide one
-		heroSlideOne.classList.add('slide-active');
-		heroSlideOne.classList.remove('slide-not-active');
-
-		heroSlideThree.classList.remove('slide-active-pos');
-		heroSlideThree.classList.add('slide-not-active-pos');
+		makeTextSlideActive(heroSlideOne, true);
+		makeTextSlideNotActive(heroSlideThree);
 	}
 };
+
+// Hero Slider nav bullets
+heroSliderNavBullets.addEventListener('click', event => {
+	if (!event.target.dataset.slideTo) return;
+
+	const slide = event.target.dataset.slideTo;
+
+	switch (slide) {
+		case 'slide-1': {
+			// if current slide === slide-1, don't switch slides
+			if (document.querySelector('.slide-active')) return;
+
+			// make text slide-1 active
+			makeTextSlideActive(heroSlideOne, true);
+			makeTextSlideNotActive(document.querySelector('.slide-active-pos'));
+
+			// make img-1 active
+			removeActiveImg(document.querySelector('.active-bg-img'));
+			addActiveImg(imgOne);
+			break;
+		}
+		case 'slide-2': {
+			console.log('slide-2');
+			break;
+		}
+		case 'slide-3': {
+			console.log('slide-3');
+			break;
+		}
+		default: {
+			break;
+		}
+	}
+});
 
 /**
  * MODAL RESERVE BUTTON ANIM

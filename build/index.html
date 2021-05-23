@@ -5,23 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 		<meta name="description" content="A contemporary and elegant restaurant website landing page" />
-		<!-- FONT AWESOME -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-		<!-- CUSTOM STYLESHEET -->
-		<link rel="stylesheet" href="./src/css/index.min.css" />
+		<link rel="stylesheet" href="./index.5ab2a45b.css" />
 		<title>Savory Restaurant</title>
 	</head>
 	<body>
 		<div class="bg-overlay"></div>
-
-		<!-- NAVBAR -->
 		<div class="sticky">
 			<nav class="navbar">
-				<!-- NAVBAR LOGO -->
-				<div class="navbar-brand">
-					<h1 class="navbar-logo">Savory</h1>
-				</div>
-				<!-- MENU ITEMS -->
+				<div class="navbar-brand"><h1 class="navbar-logo">Savory</h1></div>
 				<ul class="nav-links">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
@@ -29,54 +21,42 @@
 					<li><a href="#cooking-tips">Blog</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
-				<!-- RESERVATION BTN -->
 				<button class="btn btn-lg btn-reserve">reservation</button>
-				<!-- MOBILE MENU TOGGLE -->
-				<span class="mobile-toggle closed"><i class="fas fa-bars"></i></span>
+				<span class="closed mobile-toggle"><i class="fa-bars fas"></i></span>
 			</nav>
 		</div>
-
-		<!-- HOME -->
 		<header id="home" class="section__home">
-			<!-- BG IMAGES -->
 			<div class="img-3 not-active-bg-img"></div>
-			<div class="img-2 not-active-bg-img"></div>
-			<div class="img-1 active-bg-img"></div>
-			<!-- BG OVERLAY -->
+			<div class="img-1 not-active-bg-img"></div>
+			<div class="active-bg-img img-2"></div>
 			<div class="hero-overlay"></div>
 			<div class="container">
 				<div class="section__home--flex">
 					<div class="section__home--flex-one">
-						<!-- HERO CONTENT -->
 						<div class="hero__content">
-							<!-- SLIDE 1 -->
-							<div class="slide-one slide-active">
+							<div class="slide-active slide-one">
 								<p class="hero__content--intro-left">hey, there!</p>
 								<h3 class="hero__content--title">Welcome back to Savory.</h3>
 								<p class="hero__content--message">
 									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo vel, ullam perspiciatis fugit dolor.
 								</p>
 								<div class="hero__content--btns">
-									<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
+									<button class="btn btn-lg btn-reserve btn-shadow">reservation</button>
 									<button class="btn btn-lg btn-trans">view menu</button>
 								</div>
 							</div>
-
-							<!-- SLIDE 2 -->
-							<div class="slide-two slide-not-active-pos">
+							<div class="slide-not-active-pos slide-two">
 								<p class="hero__content--intro-left">hey, there!</p>
 								<h3 class="hero__content--title">Reserve your table today.</h3>
 								<p class="hero__content--message">
 									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo vel, ullam perspiciatis fugit dolor.
 								</p>
 								<div class="hero__content--btns">
-									<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
+									<button class="btn btn-lg btn-reserve btn-shadow">reservation</button>
 									<button class="btn btn-lg btn-trans">view menu</button>
 								</div>
 							</div>
-
-							<!-- SLIDE 3 -->
-							<div class="slide-three slide-not-active-pos">
+							<div class="slide-not-active-pos slide-three">
 								<p class="hero__content--intro-left">hey, there!</p>
 								<h3 class="hero__content--title">View our delicious menu.</h3>
 								<p class="hero__content--message">
@@ -84,37 +64,25 @@
 								</p>
 								<div class="hero__content--btns">
 									<a href="#menu" class="btn btn-lg btn-shadow">view menu</a>
-									<button class="btn btn-lg btn-trans btn-reserve">reservation</button>
+									<button class="btn btn-lg btn-reserve btn-trans">reservation</button>
 								</div>
 							</div>
-
-							<!-- SLIDER NAV -->
 							<div class="hero__slider-nav">
-								<!-- PAGINATION DOTS -->
 								<ul class="hero__slider-nav--dots">
-									<li class="hero-nav-dot hero-nav-dot-active" data-slide-to="slide-1"></li>
-									<li class="hero-nav-dot" data-slide-to="slide-2"></li>
-									<li class="hero-nav-dot" data-slide-to="slide-3"></li>
+									<li class="hero-nav-dot hero-nav-dot-active"></li>
+									<li class="hero-nav-dot"></li>
+									<li class="hero-nav-dot"></li>
 								</ul>
-								<!-- SLIDER ARROWS -->
-								<!-- <div class="hero__slider-nav--arrows">
-									<span class="hero-slider-left"><i class="fas fa-arrow-left"></i></span>
-									<span class="hero-slider-right"><i class="fas fa-arrow-right"></i></span>
-								</div> -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-
-		<!-- RESERVATION MODAL -->
 		<div id="modal" class="modal">
-			<!-- MODAL OVERLAY -->
 			<span class="modal-overlay"></span>
-			<!-- MODAL BODY -->
 			<div class="modal-content">
-				<span class="close-modal"><i class="fas fa-times-circle"></i></span>
+				<span class="close-modal"><i class="fa-times-circle fas"></i></span>
 				<h3 class="modal-content--title">Table Reservation</h3>
 				<form action="submit" class="modal-content--form">
 					<div class="form-row">
@@ -129,61 +97,49 @@
 							<option value="5 Person">5 Persons</option>
 							<option value="6 or more Persons">6 or more Persons</option>
 						</select>
-						<input type="date" size="5" name="date" placeholder="Date" required />
-						<input type="time" name="time" required />
+						<input type="date" size="5" name="date" placeholder="Date" required /> <input type="time" name="time" required />
 					</div>
-
-					<!-- MESSAGE -->
 					<div class="msg-wrapper">
 						<textarea name="message" id="reservation-msg" placeholder="Write a message..." rows="3" required></textarea>
 					</div>
-					<!-- BUTTON -->
 					<button class="btn btn-lg reserve-table">reserve a table</button>
 				</form>
 			</div>
 		</div>
-
-		<!-- SECTION CONTAINER -->
 		<section class="section__container top__section">
 			<span class="scroll-icon-bg">
 				<a href="#about"><i class="scroll-icon"></i></a>
 			</span>
 			<div class="container">
-				<!-- ABOUT -->
 				<section id="about">
-					<div class="row gx-5">
+					<div class="gx-5 row">
 						<div class="col-lg-6">
-							<!-- ABOUT IMG -->
 							<div class="about-img">
-								<img src="./src/img/about.jpg" alt="restaurant image" />
-								<span class="play-video-anim"></span>
-								<a data-fslightbox href="https://www.youtube.com/watch?v=JoXjnT4t0U8" class="play-video"
-									><i class="fas fa-play"></i
+								<img src="/about.d83f71aa.jpg" alt="restaurant image" /> <span class="play-video-anim"></span>
+								<a data-fslightbox="" href="https://www.youtube.com/watch?v=JoXjnT4t0U8" class="play-video"
+									><i class="fa-play fas"></i
 								></a>
 							</div>
 						</div>
-						<!-- ABOUT CONTENT -->
 						<div class="col-lg-6">
 							<div class="about__content">
 								<p class="hero__content--intro-left">about us</p>
 								<h1 class="about__content--title">We invite you to visit our restaurant</h1>
 								<p class="about__content--message">
-									In 2003, Savory opened its first location in downtown Toronto. Focussed entirely on serving the perfect
-									food, the tiny take-out restaurant located in the city's busy Entertainment District created a sensation
-									in the area winning praise from food critics and numerous people's choice awards.
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem minus ipsum ullam, eius voluptatibus
+									accusamus exercitationem sed quos. Sunt hic doloribus esse deserunt maxime itaque, pariatur delectus quo
+									qui nihil vero suscipit libero sint? A.
 								</p>
-
-								<!-- ABOUT BTNS -->
 								<div class="about__content--btns">
 									<button class="btn btn-lg read-more">read more</button>
 									<div>
 										<ul class="about__content--social">
-											<li><i class="fab fa-facebook"></i></li>
-											<li><i class="fab fa-instagram"></i></li>
+											<li><i class="fa-facebook fab"></i></li>
+											<li><i class="fa-instagram fab"></i></li>
 											<li>
-												<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fab fa-twitter"></i></a>
+												<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fa-twitter fab"></i></a>
 											</li>
-											<li><i class="fab fa-youtube"></i></li>
+											<li><i class="fa-youtube fab"></i></li>
 										</ul>
 									</div>
 								</div>
@@ -191,146 +147,121 @@
 						</div>
 					</div>
 				</section>
-
 				<span class="separator"></span>
-
-				<!-- WHY US -->
 				<section id="why-us" class="text-center">
 					<div class="section__header--content">
 						<p class="section__header--subtitle">why us</p>
 						<h3 class="section__header--title">Why do people choose us?</h3>
-						<p class="section__header--message">
-							Savory has received numerous awards including: Best Lunch from the readers of Eye Magazine
-						</p>
+						<p class="section__header--message">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
 					</div>
-
 					<div class="why-us--features">
 						<div class="row">
 							<div class="col-lg-4">
-								<!-- FEATURE 1 -->
 								<div class="features__content">
-									<img src="./src/img/1.svg" alt="menu image" class="features-img" />
+									<img src="/1.981c8e07.svg" alt="menu image" class="features-img" />
 									<h3 class="features__content--title">Menu for every taste</h3>
 									<p class="features__content--msg">
-										Whether your vegan, vegetarian, a meat lover or prefer international cuisine, we've got you covered.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, neque.
 									</p>
 								</div>
 							</div>
-
-							<!-- FEATURE 2 -->
 							<div class="col-lg-4">
 								<div class="features__content">
-									<img src="./src/img/2.svg" alt="fresh produce image" class="features-img" />
+									<img src="/2.51b4bdf4.svg" alt="fresh produce image" class="features-img" />
 									<h3 class="features__content--title">Fresh ingredients everyday</h3>
 									<p class="features__content--msg">
-										Fresh produce and ingredients are delivered everyday at open from the local market.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, neque.
 									</p>
 								</div>
 							</div>
-
-							<!-- FEATURE 3 -->
 							<div class="col-lg-4">
 								<div class="features__content">
-									<img src="./src/img/3.svg" alt="great chefs image" class="features-img" />
+									<img src="/3.e03a1754.svg" alt="great chefs image" class="features-img" />
 									<h3 class="features__content--title">Experienced chefs</h3>
 									<p class="features__content--msg">
-										Our chefs have a combined 30+ years in the culinary industry, they're great and love what they do.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, neque.
 									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-
 				<span class="separator"></span>
-
-				<!-- TEAM -->
 				<section id="team" class="text-center">
 					<div class="section__header--content">
 						<p class="section__header--subtitle">team</p>
 						<h3 class="section__header--title">We are ready to serve you</h3>
 						<p class="section__header--message">
-							We have a combined 30+ years in the culinary industry, we love food and we love what we do.
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem cumque omnis, adipisci eum labore illo.
 						</p>
 					</div>
-
-					<!-- TEAM CARDS -->
-					<div class="row gx-5">
-						<!-- CARD 1 -->
+					<div class="gx-5 row">
 						<div class="col-lg-4">
 							<div class="card__content">
-								<div class="card__content--img"><img src="./src/img/chef-1.jpg" alt="chef" /></div>
+								<div class="card__content--img"><img src="/chef-1.618cc447.jpg" alt="chef" /></div>
 								<h3 class="card__content--title">Trevor Belmont</h3>
 								<p class="card__content--subtitle separate">Sous Chef</p>
-
 								<ul class="card__content--social">
 									<li>
-										<a href="#"><i class="fab fa-facebook"></i></a>
+										<a href="#"><i class="fa-facebook fab"></i></a>
 									</li>
 									<li>
-										<a href="#"><i class="fab fa-instagram"></i></a>
+										<a href="#"><i class="fa-instagram fab"></i></a>
 									</li>
 									<li>
-										<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fab fa-twitter"></i></a>
+										<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fa-twitter fab"></i></a>
 									</li>
 									<li>
-										<a href="#"><i class="fab fa-youtube"></i></a>
+										<a href="#"><i class="fa-youtube fab"></i></a>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<!-- CARD 2 -->
 						<div class="col-lg-4">
 							<div class="card__content">
-								<div class="card__content--img"><img src="./src/img/chef-2.jpg" alt="chef-2" /></div>
+								<div class="card__content--img"><img src="/chef-2.b5754d29.jpg" alt="chef-2" /></div>
 								<h3 class="card__content--title">Adrian Tepes</h3>
 								<p class="card__content--subtitle separate">Head Chef</p>
-
 								<ul class="card__content--social">
 									<li>
-										<a href="#"><i class="fab fa-facebook"></i></a>
+										<a href="#"><i class="fa-facebook fab"></i></a>
 									</li>
 									<li>
-										<a href="#"><i class="fab fa-instagram"></i></a>
+										<a href="#"><i class="fa-instagram fab"></i></a>
 									</li>
 									<li>
-										<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fab fa-twitter"></i></a>
+										<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fa-twitter fab"></i></a>
 									</li>
 									<li>
-										<a href="#"><i class="fab fa-youtube"></i></a>
+										<a href="#"><i class="fa-youtube fab"></i></a>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<!-- CARD 3 -->
 						<div class="col-lg-4">
 							<div class="card__content">
-								<div class="card__content--img"><img src="./src/img/chef-3.jpg" alt="chef-3" /></div>
+								<div class="card__content--img"><img src="/chef-3.3e770303.jpg" alt="chef-3" /></div>
 								<h3 class="card__content--title">Jack Bauer</h3>
 								<p class="card__content--subtitle separate">Pastry Chef</p>
-
 								<ul class="card__content--social">
 									<li>
-										<a href="#"><i class="fab fa-facebook"></i></a>
+										<a href="#"><i class="fa-facebook fab"></i></a>
 									</li>
 									<li>
-										<a href="#"><i class="fab fa-instagram"></i></a>
+										<a href="#"><i class="fa-instagram fab"></i></a>
 									</li>
 									<li>
-										<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fab fa-twitter"></i></a>
+										<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fa-twitter fab"></i></a>
 									</li>
 									<li>
-										<a href="#"><i class="fab fa-youtube"></i></a>
+										<a href="#"><i class="fa-youtube fab"></i></a>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</section>
-
 				<span class="separator"></span>
-
-				<!-- NUMBERS -->
 				<section id="numbers">
 					<ul class="numbers">
 						<li>
@@ -359,31 +290,22 @@
 						</li>
 					</ul>
 				</section>
-
 				<span class="separator"></span>
-
-				<!-- OPENING HOURS -->
 				<section id="opening-hours" class="opening-hours">
 					<span class="white-bg"></span>
 					<div class="opening-hours--container">
-						<!-- IMAGE -->
-
 						<div class="opening-hours--img">
 							<span class="overlay"></span>
 							<div class="opening-hours--content">
 								<p class="hero__content--intro-left">our hours</p>
 								<h3 class="opening-hours--title">Opening Hours</h3>
-								<p class="opening-hours--msg">Due to COVID-19 regulations, our opening times have been adjusted.</p>
+								<p class="opening-hours--msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nihil!</p>
 							</div>
-
 							<div class="dual-btns text-white">
-								<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
+								<button class="btn btn-lg btn-reserve btn-shadow">reservation</button>
 								<a href="#" class="btn btn-lg">contact us</a>
 							</div>
 						</div>
-
-						<!-- DAYS / HOURS -->
-
 						<div class="opening-hours--time">
 							<ul class="days-hours">
 								<li>
@@ -391,7 +313,6 @@
 									<h3 class="time">05 : 00</h3>
 									<h3 class="time">17 : 30</h3>
 								</li>
-
 								<li>
 									<p class="day">saturday to sunday</p>
 									<h3 class="time">10 : 00</h3>
@@ -403,576 +324,362 @@
 				</section>
 			</div>
 		</section>
-		<!-- /.section__container -->
-
-		<!-- MOBILE APP -->
-		<section id="mobile-app" class="section__no-bg mobile-app">
+		<section id="mobile-app" class="mobile-app section__no-bg">
 			<div class="container">
 				<div class="section__no-bg--flex">
 					<div class="content__no-bg">
 						<p class="hero__content--intro-left">mobile application</p>
 						<h3 class="content__no-bg--title">Download our mobile app</h3>
-						<p class="content__no-bg--msg">Don't feel like dining in? Use our new dedicated mobile app. Available now.</p>
-
+						<p class="content__no-bg--msg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, incidunt.</p>
 						<div class="dual-btns text-white">
-							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-google-play"></i>playstore</a>
-							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
+							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fa-google-play fab"></i>playstore</a>
+							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fa-app-store fab"></i>appstore</a>
 						</div>
 					</div>
-
-					<div class="section__no-bg--image">
-						<img src="./src/img/app.png" alt="" />
-					</div>
+					<div class="section__no-bg--image"><img src="/app.69066261.png" alt="" /></div>
 				</div>
 			</div>
 		</section>
-
-		<!-- MENU -->
-		<section id="menu" class="section__container menu__section">
+		<section id="menu" class="menu__section section__container">
 			<div class="container">
 				<div class="section__header--content">
 					<p class="section__header--subtitle">menu</p>
 					<h3 class="section__header--title">Our Menu</h3>
 					<p class="section__header--message">Choose from our wide range of delicious and freshly prepared meals.</p>
 				</div>
-
 				<ul class="menu__section--btns">
 					<li data-id="main" class="selected">main dishes</li>
 					<li data-id="sides">sides</li>
 					<li data-id="drinks">drinks</li>
 					<li data-id="deserts">deserts</li>
 				</ul>
-
 				<span class="separator"></span>
-
-				<!-- MAIN DISHES LIST -->
 				<div class="food-list-wrapper">
-					<div class="menu__section--food active-food" data-target="main">
-						<!-- FOOD GRID 1 -->
+					<div class="active-food menu__section--food" data-target="main">
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/2.jpg" alt="" />
-									</div>
+									<div class="food__item--img"><img src="/2.d7237e7e.jpg" alt="" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">MAIN LIST</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/3.jpg" alt="" />
-									</div>
+									<div class="food__item--img"><img src="/3.3d321018.jpg" alt="" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Veggie Pizza</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/4.jpg" alt="" />
-									</div>
+									<div class="food__item--img"><img src="/4.d0c9371b.jpg" alt="" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Grilled Lobster</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/5.jpg" alt="" />
-									</div>
+									<div class="food__item--img"><img src="/5.f5146820.jpg" alt="" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Chilli Crayfish</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
 							</div>
 						</div>
-						<!-- MAIN DISHES GRID -->
-
-						<!-- MAIN DISHES GRID 2 -->
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/5.jpg" alt="" />
-									</div>
+									<div class="food__item--img"><img src="/5.f5146820.jpg" alt="" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Enchiladas</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/4.jpg" alt="" />
-									</div>
+									<div class="food__item--img"><img src="/4.d0c9371b.jpg" alt="" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Stew Chicken</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/6.jpg" alt="" />
-									</div>
+									<div class="food__item--img"><img src="/6.77f56eff.jpg" alt="" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Coconut Soup</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/2.jpg" alt="" />
-									</div>
+									<div class="food__item--img"><img src="/2.d7237e7e.jpg" alt="" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Smoked Salmon</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
 							</div>
 						</div>
-						<!-- MAIN DISHES GRID 2 -->
 					</div>
 				</div>
-				<!-- MAIN DISHES LIST -->
-
-				<!-- SIDES LIST -->
 				<div class="food-list-wrapper">
-					<div class="menu__section--food hidden-food" data-target="sides">
-						<!-- FOOD GRID 1 -->
+					<div class="hidden-food menu__section--food" data-target="sides">
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/5.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/5.f5146820.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">SIDES LIST</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/4.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/4.d0c9371b.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Greek Salad</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/2.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/2.d7237e7e.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Parmesan Pork</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/3.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/3.3d321018.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Roasted Steak</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
 							</div>
 						</div>
-						<!-- SIDES GRID -->
-
-						<!-- SIDES GRID 2 -->
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/6.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/6.77f56eff.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Shrimp Pasta</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/5.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/5.f5146820.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Cheesy Fries</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/4.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/4.d0c9371b.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Bread Sticks</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/3.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/3.3d321018.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Toasted Crisps</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
 							</div>
 						</div>
-						<!-- SIDES GRID 2 -->
 					</div>
 				</div>
-				<!-- SIDES LIST -->
-
-				<!-- DRINKS LIST -->
 				<div class="food-list-wrapper">
-					<div class="menu__section--food hidden-food" data-target="drinks">
-						<!-- FOOD GRID 1 -->
+					<div class="hidden-food menu__section--food" data-target="drinks">
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/5.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/5.f5146820.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">DRINKS LIST</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/4.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/4.d0c9371b.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Greek Salad</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/2.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/2.d7237e7e.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Parmesan Pork</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/3.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/3.3d321018.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Roasted Steak</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
 							</div>
 						</div>
-						<!-- DRINKS GRID -->
-
-						<!-- DRINKS GRID 2 -->
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/6.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/6.77f56eff.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Shrimp Pasta</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/5.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/5.f5146820.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Cheesy Fries</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/4.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/4.d0c9371b.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Bread Sticks</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/3.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/3.3d321018.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Toasted Crisps</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
 							</div>
 						</div>
-						<!-- DRINKS GRID 2 -->
 					</div>
 				</div>
-				<!-- DRINKS LIST -->
-
-				<!-- DESERTS LIST -->
 				<div class="food-list-wrapper">
-					<div class="menu__section--food hidden-food" data-target="deserts">
-						<!-- DESERTS GRID 1 -->
+					<div class="hidden-food menu__section--food" data-target="deserts">
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/5.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/5.f5146820.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">DESERTS LIST</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/4.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/4.d0c9371b.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Greek Salad</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/2.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/2.d7237e7e.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Parmesan Pork</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/3.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/3.3d321018.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Roasted Steak</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
 							</div>
 						</div>
-						<!-- DESERTS GRID -->
-
-						<!-- DESERTS GRID 2 -->
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/6.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/6.77f56eff.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Shrimp Pasta</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/5.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/5.f5146820.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Cheesy Fries</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/4.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/4.d0c9371b.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Bread Sticks</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
-								<!-- FOOD BODY -->
 								<div class="menu__section--food-body">
-									<div class="food__item--img">
-										<img src="./src/img/3.jpg" alt="food image" />
-									</div>
+									<div class="food__item--img"><img src="/3.3d321018.jpg" alt="food image" /></div>
 									<div class="food__item--content">
 										<h3 class="food-title">Toasted Crisps</h3>
 										<p class="food-desc">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 									</div>
-									<div class="food__item--price">
-										<p class="food-price">$9.99</p>
-									</div>
+									<div class="food__item--price"><p class="food-price">$9.99</p></div>
 								</div>
 							</div>
 						</div>
-						<!-- DESERTS GRID 2 -->
 					</div>
-					<!-- DESERTS LIST -->
 				</div>
-				<!-- FOOD LIST WRAPPER -->
 			</div>
 		</section>
-
-		<!-- BUY ONE GET ONE FREE -->
-		<section id="power-deal" class="section__no-bg bogof">
+		<section id="power-deal" class="bogof section__no-bg">
 			<div class="container">
 				<div class="section__no-bg--flex">
-					<div class="content__no-bg bogof--info-mt">
+					<div class="bogof--info-mt content__no-bg">
 						<p class="hero__content--intro-left">power deals</p>
 						<h3 class="content__no-bg--title">
 							Buy one, <br />
 							Get one free!
 						</h3>
-						<p class="content__no-bg--msg">
-							Our <strong>Cajan Burger</strong> has been bussin', so we're gonna give you a little extra.
-						</p>
-
+						<p class="content__no-bg--msg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, incidunt.</p>
 						<div class="dual-btns text-white">
-							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-google-play"></i>playstore</a>
-							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
+							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fa-google-play fab"></i>playstore</a>
+							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fa-app-store fab"></i>appstore</a>
 						</div>
 					</div>
-
-					<div class="section__no-bg--image">
-						<img src="./src/img/burger.png" alt="" />
-					</div>
+					<div class="section__no-bg--image"><img src="/burger.124601ef.png" alt="" /></div>
 				</div>
 			</div>
 		</section>
-
-		<!-- REVIEWS -->
-		<section id="reviews" class="section__container reviews__section">
+		<section id="reviews" class="reviews__section section__container">
 			<div class="container">
 				<div class="section__header--content">
 					<p class="section__header--subtitle">reviews</p>
@@ -981,91 +688,71 @@
 						We've been in business a very long time, hear what our clients have to say about their experience with us.
 					</p>
 				</div>
-
-				<!-- REVIEW CONTENT -->
 				<div class="reviews__content swiper-container">
 					<span class="quote-icon">"</span>
 					<div class="swiper-wrapper">
-						<!-- REVIEW 1 -->
 						<div class="content__body swiper-slide" data-review="1">
 							<h3 class="content__body--title">Amazing Customer Service!</h3>
 							<p class="content__body--msg">
-								I went to Savory in Toronto last night and I must say I get very EXCITED whenever I visit and have good food
-								. This was the best Italian Food I have tasted in Toronto by far.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis odit, harum assumenda saepe
+								quidem nesciunt quia error eaque maiores!
 							</p>
 							<div class="content__body--user">
-								<div class="user-img">
-									<img src="./src/img/chef-1.jpg" alt="user 1" />
-								</div>
+								<div class="user-img"><img src="/chef-1.618cc447.jpg" alt="user 1" /></div>
 								<p class="username">Harry Potter</p>
 								<p class="date">12/23/20</p>
 							</div>
 						</div>
-						<!-- REVIEW 2 -->
-						<div class="content__body active-test swiper-slide" data-review="2">
+						<div class="active-test content__body swiper-slide" data-review="2">
 							<h3 class="content__body--title">Best Cheeseburgers ever!</h3>
 							<p class="content__body--msg">
-								We are so glad that Savory found a new place to call home. We visited on Friday and loved the new space. The
-								place was full which we were happy to see. Best burgers ever!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis odit, harum assumenda saepe
+								quidem nesciunt quia error eaque maiores!
 							</p>
 							<div class="content__body--user">
-								<div class="user-img">
-									<img src="./src/img/chef-1.jpg" alt="user 1" />
-								</div>
+								<div class="user-img"><img src="/chef-1.618cc447.jpg" alt="user 1" /></div>
 								<p class="username">Ronald Weasley</p>
 								<p class="date">12/23/20</p>
 							</div>
 						</div>
-						<!-- REVIEW 3 -->
 						<div class="content__body swiper-slide" data-review="3">
 							<h3 class="content__body--title">Quality Service always!</h3>
 							<p class="content__body--msg">
-								Superb food, amazing service and staff. You won’t find better, fresher food in Toronto. Owner/chef is an
-								Italian gentleman who lived in the UK and moved to Canada.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis odit, harum assumenda saepe
+								quidem nesciunt quia error eaque maiores!
 							</p>
 							<div class="content__body--user">
-								<div class="user-img">
-									<img src="./src/img/chef-1.jpg" alt="user 1" />
-								</div>
+								<div class="user-img"><img src="/chef-1.618cc447.jpg" alt="user 1" /></div>
 								<p class="username">Hermoine Granger</p>
 								<p class="date">12/23/20</p>
 							</div>
 						</div>
-						<!-- REVIEW 4 -->
 						<div class="content__body swiper-slide" data-review="4">
 							<h3 class="content__body--title">They always take care of me</h3>
 							<p class="content__body--msg">
-								The best word to describe Savory is INCREDIBLE! The food is so fresh and delicious. Our favs are any of the
-								handmade pastas. Great wine selection as well!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis odit, harum assumenda saepe
+								quidem nesciunt quia error eaque maiores!
 							</p>
 							<div class="content__body--user">
-								<div class="user-img">
-									<img src="./src/img/chef-1.jpg" alt="user 1" />
-								</div>
+								<div class="user-img"><img src="/chef-1.618cc447.jpg" alt="user 1" /></div>
 								<p class="username">Hermoine Granger</p>
 								<p class="date">12/23/20</p>
 							</div>
 						</div>
-						<!-- REVIEW 5 -->
 						<div class="content__body swiper-slide" data-review="5">
 							<h3 class="content__body--title">Some of the best food I've eaten!</h3>
 							<p class="content__body--msg">
-								We visit Savory on as often as we can and every meal is Absolutely delicious never been disappointed keep up
-								the good work
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis odit, harum assumenda saepe
+								quidem nesciunt quia error eaque maiores!
 							</p>
 							<div class="content__body--user">
-								<div class="user-img">
-									<img src="./src/img/chef-1.jpg" alt="user 1" />
-								</div>
+								<div class="user-img"><img src="/chef-1.618cc447.jpg" alt="user 1" /></div>
 								<p class="username">house slytherin</p>
 								<p class="date">12/23/20</p>
 							</div>
 						</div>
 					</div>
-					<!-- /. swiper wrapper -->
 				</div>
-
-				<!-- REVIEW SLIDER DOT CONTROLS -->
 				<div class="reviews__controls">
 					<a href="#menu" class="btn btn-lg hover-white">view our menu</a>
 					<div class="reviews__controls--btns">
@@ -1077,103 +764,82 @@
 							<li class="dot"></li>
 						</ul>
 					</div>
-
-					<!-- REVIEW SLIDER NAV -->
 					<div class="slider__nav">
 						<p class="slider__nav--title">slider navigation</p>
 						<div class="slider__nav--btns">
-							<i class="fas fa-arrow-left slider__nav-prev" data-to="left"></i>
-							<i class="fas fa-arrow-right slider__nav-next" data-to="right"></i>
+							<i class="fa-arrow-left fas slider__nav-prev" data-to="left"></i>
+							<i class="fa-arrow-right fas slider__nav-next" data-to="right"></i>
 						</div>
 					</div>
 				</div>
-
 				<span class="separator"></span>
-
 				<section id="cooking-tips">
 					<div class="section__header--content">
 						<p class="section__header--subtitle">recipes</p>
 						<h3 class="section__header--title">Cooking Tips & Recipes</h3>
-						<p class="section__header--message">Learn cooking tips, tricks and recipes from out chefs.</p>
+						<p class="section__header--message">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
 					</div>
-
 					<div class="cooking-tips--container">
-						<!-- ARTICLE 1 -->
 						<div class="cooking-tips--body">
 							<div class="cooking-tips--img">
-								<span class="img-category article">article</span>
-								<img src="./src/img/2.jpg" alt="tip image 1" />
+								<span class="article img-category">article</span> <img src="/2.d7237e7e.jpg" alt="tip image 1" />
 							</div>
 							<div class="cooking-tips--content">
-								<h3 class="content__body--title">Enhance your meal flavours</h3>
+								<h3 class="content__body--title">Enhancing your meal flavours</h3>
 								<p class="content__body--msg">
-									Wanna enhance the flavours for your next meal? Learn the tips our chefs use to make our food taste word
-									class and give it that extra zest.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolorum hic distinctio ipsam nam non
+									corrupti
 								</p>
 								<div class="content__body--user">
-									<div class="user-img">
-										<img src="./src/img/chef-1.jpg" alt="user 1" />
-									</div>
+									<div class="user-img"><img src="/chef-1.618cc447.jpg" alt="user 1" /></div>
 									<p class="username">jack bauer</p>
 									<p class="date">12/23/20</p>
 								</div>
 							</div>
 						</div>
-						<!-- ARTICLE 2 -->
 						<div class="cooking-tips--body">
 							<div class="cooking-tips--img">
-								<span class="img-category recipe">recipe</span>
-								<img src="./src/img/5.jpg" alt="tip image 2" />
+								<span class="img-category recipe">recipe</span> <img src="/5.f5146820.jpg" alt="tip image 2" />
 							</div>
 							<div class="cooking-tips--content">
 								<h3 class="content__body--title">Creamy Shrimp Pasta</h3>
 								<p class="content__body--msg">
-									Featured in Food Blogger Magazine, our head chef created this recipe over 10+ years ago. Learn how he
-									did it and how you can add your own personal spin on it.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolorum hic distinctio ipsam nam non
+									corrupti
 								</p>
 								<div class="content__body--user">
-									<div class="user-img">
-										<img src="./src/img/chef-1.jpg" alt="user 1" />
-									</div>
+									<div class="user-img"><img src="/chef-1.618cc447.jpg" alt="user 1" /></div>
 									<p class="username">adrian tepes</p>
 									<p class="date">12/23/20</p>
 								</div>
 							</div>
 						</div>
-						<!-- ARTICLE 3 -->
 						<div class="cooking-tips--body">
 							<div class="cooking-tips--img">
-								<span class="img-category blog">blog</span>
-								<img src="./src/img/3.jpg" alt="tip image 1" />
+								<span class="blog img-category">blog</span> <img src="/3.3d321018.jpg" alt="tip image 1" />
 							</div>
 							<div class="cooking-tips--content">
 								<h3 class="content__body--title">Becoming a better Chef</h3>
 								<p class="content__body--msg">
-									Becoming a chef is not easy, but if you follow a few guidelines from our own experts, maybe we can help
-									make your journey just a little bit easier.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolorum hic distinctio ipsam nam non
+									corrupti
 								</p>
 								<div class="content__body--user">
-									<div class="user-img">
-										<img src="./src/img/chef-1.jpg" alt="user 1" />
-									</div>
+									<div class="user-img"><img src="/chef-1.618cc447.jpg" alt="user 1" /></div>
 									<p class="username">trevor belmont</p>
 									<p class="date">12/23/20</p>
 								</div>
 							</div>
 						</div>
 					</div>
-
 					<div class="cooking-tips--footer">
 						<p class="footer-msg">
 							Read all our articles, blog posts and tips over on our blog. We add new content every week!
 						</p>
 						<a href="#blog" class="btn btn-lg hover-white">visit blog</a>
 					</div>
-
 					<span class="separator"></span>
 				</section>
-
-				<!-- NEWSLETTER -->
 				<section id="newsletter" class="newsletter">
 					<div class="section__header--content">
 						<p class="section__header--subtitle">newsletter</p>
@@ -1182,19 +848,14 @@
 							Subscribe and stay up-to-date with our new recipes, articles, blog posts and more.
 						</p>
 					</div>
-
-					<!-- NEWSLETTER INPUT FORM -->
 					<div class="newsletter-contact">
 						<form>
 							<input type="email" name="email" placeholder="Enter your email address" required />
-							<button class="subscribe btn btn-lg btn-shadow">subscribe</button>
+							<button class="btn btn-lg btn-shadow subscribe">subscribe</button>
 						</form>
 					</div>
 				</section>
-
 				<span class="separator"></span>
-
-				<!-- CONTACT -->
 				<section id="contact">
 					<div class="section__header--content">
 						<p class="section__header--subtitle">contact</p>
@@ -1203,62 +864,48 @@
 							Have a question about our services, or just want to know how we're doing?. Drop us a line.
 						</p>
 					</div>
-
-					<!-- CONTACT FORM INPUTS -->
 					<form class="contact-form--body">
-						<!-- NAME -->
 						<div class="contact-form--name">
 							<input type="text" name="first-name" placeholder="First Name" required />
 							<input type="text" name="last-name" placeholder="Last Name" required />
 						</div>
-						<!-- TEL. & EMAIL -->
 						<div class="contact-form--tel">
 							<input type="number" name="tel" placeholder="Tel. " />
 							<input type="email" name="emal" placeholder="Email" required />
 						</div>
-						<!-- MESSAGE -->
 						<div class="contact-form--msg">
 							<textarea type="text" name="message" placeholder="Write message here..." rows="5" required></textarea>
 						</div>
-
-						<!-- SEND MSG BTN -->
-						<div class="send-btn">
-							<button class="btn btn-lg" class="send-msg" type="submit">send message</button>
-						</div>
+						<div class="send-btn"><button class="btn btn-lg" type="submit">send message</button></div>
 					</form>
 				</section>
 			</div>
-			<!-- ./ container -->
-
-			<!-- FOOTER -->
 			<footer id="footer" class="footer">
 				<div class="container">
 					<div class="footer-body--top">
 						<h3 class="logo">Savory</h3>
 						<ul class="social-links">
 							<li>
-								<a href="#"><i class="fab fa-facebook"></i></a>
+								<a href="#"><i class="fa-facebook fab"></i></a>
 							</li>
 							<li>
-								<a href="#"><i class="fab fa-instagram"></i></a>
+								<a href="#"><i class="fa-instagram fab"></i></a>
 							</li>
 							<li>
-								<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fab fa-twitter"></i></a>
+								<a href="https://twitter.com/TheAvgCoder" target="_blank"><i class="fa-twitter fab"></i></a>
 							</li>
 							<li>
-								<a href="#"><i class="fab fa-youtube"></i></a>
+								<a href="#"><i class="fa-youtube fab"></i></a>
 							</li>
 						</ul>
 					</div>
 					<span class="separator"></span>
-
 					<div class="footer-body--bottom">
 						<div class="about-footer">
 							<h3>About Us</h3>
-							<p class="text-justify">
-								In 2003, Savory opened its first location in downtown Toronto. Focussed entirely on serving the perfect
-								food, the tiny take-out restaurant created a sensation in the area winning praise from food critics and
-								numerous people's choice awards.
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aut quam alias praesentium consequuntur,
+								mollitia distinctio dignissimos accusamus omnis ducimus!
 							</p>
 							<a href="#" class="footer-link">read more</a>
 						</div>
@@ -1266,16 +913,13 @@
 							<h3>Contact Info</h3>
 							<ul class="contact-footer--links">
 								<li class="contact-footer--links-item">
-									<span class="item-title">call:</span>
-									<span>+76 (094) 754 43 7I</span>
+									<span class="item-title">call:</span> <span>+76 (094) 754 43 7I</span>
 								</li>
 								<li class="contact-footer--links-item">
-									<span class="item-title">write:</span>
-									<span>savory.restaurant@savory.com</span>
+									<span class="item-title">write:</span> <span>savory.restaurant@savory.com</span>
 								</li>
 								<li class="contact-footer--links-item">
-									<span class="item-title">find us:</span>
-									<span>800 BC, Vancouver, Canada</span>
+									<span class="item-title">find us:</span> <span>800 BC, Vancouver, Canada</span>
 								</li>
 							</ul>
 						</div>
@@ -1288,12 +932,10 @@
 							<a href="#" class="footer-link">read more</a>
 						</div>
 					</div>
-
 					<span class="separator"></span>
-
 					<div class="copyright">
 						<p>
-							Built with <i class="fas fa-heart heart"></i> by
+							Built with <i class="fa-heart fas heart"></i> by
 							<a href="https://shamar-morrison.netlify.app/" class="portfolio-link" target="_blank">Shamar Morrison</a>. All
 							Rights Reserved.
 						</p>
@@ -1302,9 +944,6 @@
 				</div>
 			</footer>
 		</section>
-		<!-- ./ section__container -->
 	</body>
-
-	<!-- CUSTOM JS -->
-	<script src="./src/js/index.js"></script>
+	<script src="/index.ba3bde54.js"></script>
 </html>
