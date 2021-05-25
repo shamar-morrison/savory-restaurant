@@ -45,7 +45,6 @@
 
 @mixin hero-img {
 	position: absolute;
-	// z-index: -9999;
 	height: 100%;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -53,8 +52,8 @@
 	background-position: 0 -150px;
 	transition-duration: 1500ms;
 
-	@media screen and (max-width: 1200px) {
-		background-size: calc(100vw + 150px);
+	@include media-breakpoint-down(xl) {
+		background-size: calc(100vw + 100vh);
 		background-position: center center;
 	}
 }

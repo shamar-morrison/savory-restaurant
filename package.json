@@ -2,7 +2,7 @@
 	"name": "savory-restaurant",
 	"version": "1.0.0",
 	"description": "A healthy and eco-friendly resturant for the entire family",
-	"default": "index.html",
+	"main": "index.html",
 	"homepage": ".",
 	"scripts": {
 		"start": "parcel index.html",
@@ -17,7 +17,6 @@
 	],
 	"devDependencies": {
 		"fslightbox": "^3.2.3",
-		"parcel": "^2.0.0-beta.2",
 		"sass": "^1.32.12"
 	},
 	"dependencies": {

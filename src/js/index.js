@@ -46,7 +46,22 @@ const quoteIcon = document.querySelector('.quote-icon');
 const heroSliderNavBullets = document.querySelector('.hero__slider-nav--dots');
 const pauseHeroSliderBtn = document.querySelector('.btn-pause-slider');
 
+const numbersSec = document.querySelector('#numbers');
+const mobileAppSec = document.querySelector('#mobile-app');
+const powerDealSec = document.querySelector('#power-deal');
+
+const mobileAppBtns = document.querySelector('.section__no-bg.mobile-app .dual-btns');
+const mobileAppTitle = document.querySelector('.mobile-app--title');
+const powerDealBtns = document.querySelector('.section__no-bg.bogof .dual-btns');
+const powerDealTitle = document.querySelector('.power-deal--title');
+
 let isHeroSliderPaused = false;
+
+const removePreloader = () => {
+	document.querySelector('.preloader').style.opacity = '0';
+	document.querySelector('.preloader').style.pointerEvents = 'none';
+	document.querySelector('body').style.overflowY = 'visible';
+};
 
 /**
  * Init
@@ -67,6 +82,8 @@ window.onload = function () {
 	// init review slider quote icon anim
 	document.querySelector('.quote-icon').style.transition = '500ms cubic-bezier(0.25, 0.8, 0.25, 1)';
 	document.querySelector('.quote-icon').style.transitionProperty = 'opacity, transform';
+
+	removePreloader();
 };
 
 // sticky navbar anim
@@ -294,10 +311,8 @@ const openMobileMenu = function () {
 // toggle mobile menu
 const toggleMobileMenu = function () {
 	if (mobileToggle.classList.contains('open')) {
-		// close menu
 		closeMobileMenu();
 	} else {
-		// open menu
 		openMobileMenu();
 	}
 };
@@ -494,7 +509,72 @@ modalForm.onsubmit = event => {
 };
 
 /**
- * LIGHTBOX
+ * NUMBER COUNTER
  */
 
-// lightbox video player
+const counters = document.querySelectorAll('.numbers__block--num');
+// the speed at which to animate. The lower the number, the faster the anim
+const countSpeed = 99;
+
+const animNumbers = event => {
+	if (!event[0].isIntersecting) return;
+
+	counters.forEach((counter, i) => {
+		const updateCount = () => {
+			const target = +counter.dataset.count; // number to increment to
+			const count = +counter.innerText;
+			const inc = target / countSpeed;
+
+			if (count < target) {
+				counter.innerHTML = `${Math.trunc(count + inc)}`;
+				setTimeout(updateCount, 1);
+			} else {
+				counter.innerHTML = `${target} ${i === 2 ? '<span class="icon small">%</span>' : '<span class="icon">+</span>'}`;
+			}
+		};
+		updateCount();
+	});
+};
+
+const numbersObs = new IntersectionObserver(animNumbers, { threshold: 1 });
+numbersObs.observe(numbersSec);
+
+/**
+ * MOBILE APP, BUY ONE GET ONE FREE & FOOTER ANIMATION
+ */
+
+/**
+ * Animate element out of view
+ *
+ * @param {Element} el HTML Element to animate
+ * @param {string} distance translateY distance to animate element to/from
+ */
+const animateOut = (el, distance = '350%') => {
+	el.style.transform = `translateY(${distance}) scale(.7)`;
+	el.style.opacity = '0';
+};
+
+const animateIn = el => {
+	el.style.transform = 'translateY(0%) scale(1)';
+	el.style.opacity = '1';
+};
+
+const animSec = (event, elOne, elTwo) => {
+	// if element is not intersecting viewport
+	if (!event[0].isIntersecting) {
+		animateOut(elOne);
+
+		elTwo.style.transitionDelay = '350ms';
+		animateOut(elTwo, '150%');
+		return;
+	}
+
+	animateIn(elOne);
+	animateIn(elTwo);
+};
+
+const mobileAppSecObs = new IntersectionObserver(event => animSec(event, mobileAppBtns, mobileAppTitle), { threshold: 0.5 });
+mobileAppSecObs.observe(mobileAppSec);
+
+const powerDealSecObs = new IntersectionObserver(event => animSec(event, powerDealBtns, powerDealTitle), { threshold: 0.5 });
+powerDealSecObs.observe(powerDealSec);

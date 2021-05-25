@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="A contemporary and elegant restaurant website landing page">
+		<link rel="shortcut icon" href="/favicon.80934ffe.png" type="image/png">
 		<!-- FONT AWESOME -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 		<!-- CUSTOM STYLESHEET -->
@@ -12,15 +13,21 @@
 		<title>Savory Restaurant</title>
 	</head>
 	<body>
+		<!-- PRELOADER -->
+		<div class="preloader">
+			<span class="preloader-overlay"></span>
+			<span class="preloader-gif"> </span>
+			<span class="preloader-gif-inner"></span>
+		</div>
+		<!-- BG OVERLAY -->
 		<div class="bg-overlay"></div>
-
 		<!-- NAVBAR -->
 		<div class="sticky">
 			<nav class="navbar">
 				<!-- NAVBAR LOGO -->
-				<div class="navbar-brand">
-					<h1 class="navbar-logo">Savory</h1>
-				</div>
+				<a href="#home" class="navbar-brand">
+					<img src="/logo.5d271741.png" alt="Logo" class="navbar-logo">
+				</a>
 				<!-- MENU ITEMS -->
 				<ul class="nav-links">
 					<li><a href="#home">Home</a></li>
@@ -35,7 +42,6 @@
 				<span class="mobile-toggle closed"><i class="fas fa-bars"></i></span>
 			</nav>
 		</div>
-
 		<!-- HOME -->
 		<header id="home" class="section__home">
 			<!-- BG IMAGES -->
@@ -62,10 +68,9 @@
 								</p>
 								<div class="hero__content--btns">
 									<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
-									<button class="btn btn-lg btn-trans">view menu</button>
+									<a href="#menu" class="btn btn-lg btn-trans">view menu</a>
 								</div>
 							</div>
-
 							<!-- SLIDE 2 -->
 							<div class="slide-two slide-not-active-pos">
 								<p class="hero__content--intro-left">hey, there!</p>
@@ -78,10 +83,9 @@
 								</p>
 								<div class="hero__content--btns">
 									<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
-									<button class="btn btn-lg btn-trans">view menu</button>
+									<a href="#menu" class="btn btn-lg btn-trans">view menu</a>
 								</div>
 							</div>
-
 							<!-- SLIDE 3 -->
 							<div class="slide-three slide-not-active-pos">
 								<p class="hero__content--intro-left">hey, there!</p>
@@ -98,7 +102,6 @@
 									<button class="btn btn-lg btn-trans btn-reserve">reservation</button>
 								</div>
 							</div>
-
 							<!-- SLIDER NAV -->
 							<div class="hero__slider-nav">
 								<!-- PAGINATION DOTS -->
@@ -114,7 +117,6 @@
 				</div>
 			</div>
 		</header>
-
 		<!-- RESERVATION MODAL -->
 		<div id="modal" class="modal">
 			<!-- MODAL OVERLAY -->
@@ -139,7 +141,6 @@
 						<input type="date" size="5" name="date" placeholder="Date" required="">
 						<input type="time" name="time" required="">
 					</div>
-
 					<!-- MESSAGE -->
 					<div class="msg-wrapper">
 						<textarea name="message" id="reservation-msg" placeholder="Write a message..." rows="3" required=""></textarea>
@@ -149,7 +150,6 @@
 				</form>
 			</div>
 		</div>
-
 		<!-- SECTION CONTAINER -->
 		<section class="section__container top__section">
 			<span class="scroll-icon-bg">
@@ -177,7 +177,6 @@
 									food, the tiny take-out restaurant located in the city's busy Entertainment District created a sensation
 									in the area winning praise from food critics and numerous people's choice awards.
 								</p>
-
 								<!-- ABOUT BTNS -->
 								<div class="about__content--btns">
 									<button class="btn btn-lg read-more">read more</button>
@@ -196,9 +195,7 @@
 						</div>
 					</div>
 				</section>
-
 				<span class="separator"></span>
-
 				<!-- WHY US -->
 				<section id="why-us" class="text-center">
 					<div class="section__header--content">
@@ -208,7 +205,6 @@
 							Savory has received numerous awards including: Best Lunch from the readers of Eye Magazine
 						</p>
 					</div>
-
 					<div class="why-us--features">
 						<div class="row">
 							<div class="col-lg-4">
@@ -221,7 +217,6 @@
 									</p>
 								</div>
 							</div>
-
 							<!-- FEATURE 2 -->
 							<div class="col-lg-4">
 								<div class="features__content">
@@ -232,7 +227,6 @@
 									</p>
 								</div>
 							</div>
-
 							<!-- FEATURE 3 -->
 							<div class="col-lg-4">
 								<div class="features__content">
@@ -246,9 +240,7 @@
 						</div>
 					</div>
 				</section>
-
 				<span class="separator"></span>
-
 				<!-- TEAM -->
 				<section id="team" class="text-center">
 					<div class="section__header--content">
@@ -258,7 +250,6 @@
 							We have a combined 30+ years in the culinary industry, we love food and we love what we do.
 						</p>
 					</div>
-
 					<!-- TEAM CARDS -->
 					<div class="row gx-5">
 						<!-- CARD 1 -->
@@ -267,7 +258,6 @@
 								<div class="card__content--img"><img src="/chef-1.195b04fb.jpg" alt="chef"></div>
 								<h3 class="card__content--title">Trevor Belmont</h3>
 								<p class="card__content--subtitle separate">Sous Chef</p>
-
 								<ul class="card__content--social">
 									<li>
 										<a href="#"><i class="fab fa-facebook"></i></a>
@@ -290,7 +280,6 @@
 								<div class="card__content--img"><img src="/chef-2.7760a252.jpg" alt="chef-2"></div>
 								<h3 class="card__content--title">Adrian Tepes</h3>
 								<p class="card__content--subtitle separate">Head Chef</p>
-
 								<ul class="card__content--social">
 									<li>
 										<a href="#"><i class="fab fa-facebook"></i></a>
@@ -313,7 +302,6 @@
 								<div class="card__content--img"><img src="/chef-3.fb1176b1.jpg" alt="chef-3"></div>
 								<h3 class="card__content--title">Jack Bauer</h3>
 								<p class="card__content--subtitle separate">Pastry Chef</p>
-
 								<ul class="card__content--social">
 									<li>
 										<a href="#"><i class="fab fa-facebook"></i></a>
@@ -332,47 +320,42 @@
 						</div>
 					</div>
 				</section>
-
 				<span class="separator"></span>
-
 				<!-- NUMBERS -->
 				<section id="numbers">
 					<ul class="numbers">
 						<li>
 							<div class="numbers__block">
-								<h3 class="numbers__block--num">200 <span class="icon">+</span></h3>
+								<h3 class="numbers__block--num" data-count="700">0</h3>
 								<p class="numbers__block--text">visitors daily</p>
 							</div>
 						</li>
 						<li>
 							<div class="numbers__block">
-								<h3 class="numbers__block--num">500 <span class="icon">+</span></h3>
+								<h3 class="numbers__block--num" data-count="500">0</h3>
 								<p class="numbers__block--text">deliveries monthly</p>
 							</div>
 						</li>
 						<li>
 							<div class="numbers__block">
-								<h3 class="numbers__block--num">100 <span class="icon small">%</span></h3>
+								<h3 class="numbers__block--num" data-count="100">0</h3>
 								<p class="numbers__block--text">positive feedback</p>
 							</div>
 						</li>
 						<li>
 							<div class="numbers__block">
-								<h3 class="numbers__block--num">80 <span class="icon">+</span></h3>
+								<h3 class="numbers__block--num" data-count="300">0</h3>
 								<p class="numbers__block--text">awards</p>
 							</div>
 						</li>
 					</ul>
 				</section>
-
 				<span class="separator"></span>
-
 				<!-- OPENING HOURS -->
 				<section id="opening-hours" class="opening-hours">
 					<span class="white-bg"></span>
 					<div class="opening-hours--container">
 						<!-- IMAGE -->
-
 						<div class="opening-hours--img">
 							<span class="overlay"></span>
 							<div class="opening-hours--content">
@@ -380,15 +363,12 @@
 								<h3 class="opening-hours--title">Opening Hours</h3>
 								<p class="opening-hours--msg">Due to COVID-19 regulations, our opening times have been adjusted.</p>
 							</div>
-
 							<div class="dual-btns text-white">
 								<button class="btn btn-lg btn-shadow btn-reserve">reservation</button>
 								<a href="#" class="btn btn-lg">contact us</a>
 							</div>
 						</div>
-
 						<!-- DAYS / HOURS -->
-
 						<div class="opening-hours--time">
 							<ul class="days-hours">
 								<li>
@@ -396,7 +376,6 @@
 									<h3 class="time">05 : 00</h3>
 									<h3 class="time">17 : 30</h3>
 								</li>
-
 								<li>
 									<p class="day">saturday to sunday</p>
 									<h3 class="time">10 : 00</h3>
@@ -416,22 +395,19 @@
 				<div class="section__no-bg--flex">
 					<div class="content__no-bg">
 						<p class="hero__content--intro-left">mobile application</p>
-						<h3 class="content__no-bg--title">Download our mobile app</h3>
+						<h3 class="content__no-bg--title mobile-app--title">Download our mobile app</h3>
 						<p class="content__no-bg--msg">Don't feel like dining in? Use our new dedicated mobile app. Available now.</p>
-
 						<div class="dual-btns text-white">
 							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-google-play"></i>playstore</a>
 							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
 						</div>
 					</div>
-
 					<div class="section__no-bg--image">
-						<img src="/app.b861355c.png" alt="">
+						<img src="/app.b861355c.png" alt="mobile app" class="mobile-app-img">
 					</div>
 				</div>
 			</div>
 		</section>
-
 		<!-- MENU -->
 		<section id="menu" class="section__container menu__section">
 			<div class="container">
@@ -440,16 +416,13 @@
 					<h3 class="section__header--title">Our Menu</h3>
 					<p class="section__header--message">Choose from our wide range of delicious and freshly prepared meals.</p>
 				</div>
-
 				<ul class="menu__section--btns">
 					<li data-id="main" class="selected">main dishes</li>
 					<li data-id="sides">sides</li>
 					<li data-id="drinks">drinks</li>
 					<li data-id="deserts">deserts</li>
 				</ul>
-
 				<span class="separator"></span>
-
 				<!-- MAIN DISHES LIST -->
 				<div class="food-list-wrapper">
 					<div class="menu__section--food active-food" data-target="main">
@@ -511,7 +484,6 @@
 							</div>
 						</div>
 						<!-- MAIN DISHES GRID -->
-
 						<!-- MAIN DISHES GRID 2 -->
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
@@ -573,7 +545,6 @@
 					</div>
 				</div>
 				<!-- MAIN DISHES LIST -->
-
 				<!-- SIDES LIST -->
 				<div class="food-list-wrapper">
 					<div class="menu__section--food hidden-food" data-target="sides">
@@ -635,7 +606,6 @@
 							</div>
 						</div>
 						<!-- SIDES GRID -->
-
 						<!-- SIDES GRID 2 -->
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
@@ -697,7 +667,6 @@
 					</div>
 				</div>
 				<!-- SIDES LIST -->
-
 				<!-- DRINKS LIST -->
 				<div class="food-list-wrapper">
 					<div class="menu__section--food hidden-food" data-target="drinks">
@@ -759,7 +728,6 @@
 							</div>
 						</div>
 						<!-- DRINKS GRID -->
-
 						<!-- DRINKS GRID 2 -->
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
@@ -821,7 +789,6 @@
 					</div>
 				</div>
 				<!-- DRINKS LIST -->
-
 				<!-- DESERTS LIST -->
 				<div class="food-list-wrapper">
 					<div class="menu__section--food hidden-food" data-target="deserts">
@@ -883,7 +850,6 @@
 							</div>
 						</div>
 						<!-- DESERTS GRID -->
-
 						<!-- DESERTS GRID 2 -->
 						<div class="menu__section--food-grid">
 							<div class="menu__section--food-list">
@@ -948,34 +914,30 @@
 				<!-- FOOD LIST WRAPPER -->
 			</div>
 		</section>
-
 		<!-- BUY ONE GET ONE FREE -->
 		<section id="power-deal" class="section__no-bg bogof">
 			<div class="container">
 				<div class="section__no-bg--flex">
 					<div class="content__no-bg bogof--info-mt">
 						<p class="hero__content--intro-left">power deals</p>
-						<h3 class="content__no-bg--title">
+						<h3 class="content__no-bg--title power-deal--title">
 							Buy one, <br>
 							Get one free!
 						</h3>
 						<p class="content__no-bg--msg">
 							Our <strong>Cajan Burger</strong> has been bussin', so we're gonna give you a little extra.
 						</p>
-
 						<div class="dual-btns text-white">
 							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-google-play"></i>playstore</a>
 							<a href="#" class="btn btn-lg btn-shadow" role="button"><i class="fab fa-app-store"></i>appstore</a>
 						</div>
 					</div>
-
 					<div class="section__no-bg--image">
 						<img src="/burger.c6c0d219.png" alt="">
 					</div>
 				</div>
 			</div>
 		</section>
-
 		<!-- REVIEWS -->
 		<section id="reviews" class="section__container reviews__section">
 			<div class="container">
@@ -986,7 +948,6 @@
 						We've been in business a very long time, hear what our clients have to say about their experience with us.
 					</p>
 				</div>
-
 				<!-- REVIEW CONTENT -->
 				<div class="reviews__content swiper-container">
 					<span class="quote-icon">"</span>
@@ -1069,7 +1030,6 @@
 					</div>
 					<!-- /. swiper wrapper -->
 				</div>
-
 				<!-- REVIEW SLIDER DOT CONTROLS -->
 				<div class="reviews__controls">
 					<a href="#menu" class="btn btn-lg hover-white">view our menu</a>
@@ -1082,7 +1042,6 @@
 							<li class="dot"></li>
 						</ul>
 					</div>
-
 					<!-- REVIEW SLIDER NAV -->
 					<div class="slider__nav">
 						<p class="slider__nav--title">slider navigation</p>
@@ -1092,16 +1051,13 @@
 						</div>
 					</div>
 				</div>
-
 				<span class="separator"></span>
-
 				<section id="cooking-tips">
 					<div class="section__header--content">
 						<p class="section__header--subtitle">recipes</p>
 						<h3 class="section__header--title">Cooking Tips & Recipes</h3>
 						<p class="section__header--message">Learn cooking tips, tricks and recipes from out chefs.</p>
 					</div>
-
 					<div class="cooking-tips--container">
 						<!-- ARTICLE 1 -->
 						<div class="cooking-tips--body">
@@ -1167,17 +1123,14 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="cooking-tips--footer">
 						<p class="footer-msg">
 							Read all our articles, blog posts and tips over on our blog. We add new content every week!
 						</p>
 						<a href="#blog" class="btn btn-lg hover-white">visit blog</a>
 					</div>
-
 					<span class="separator"></span>
 				</section>
-
 				<!-- NEWSLETTER -->
 				<section id="newsletter" class="newsletter">
 					<div class="section__header--content">
@@ -1187,7 +1140,6 @@
 							Subscribe and stay up-to-date with our new recipes, articles, blog posts and more.
 						</p>
 					</div>
-
 					<!-- NEWSLETTER INPUT FORM -->
 					<div class="newsletter-contact">
 						<form>
@@ -1196,9 +1148,7 @@
 						</form>
 					</div>
 				</section>
-
 				<span class="separator"></span>
-
 				<!-- CONTACT -->
 				<section id="contact">
 					<div class="section__header--content">
@@ -1208,7 +1158,6 @@
 							Have a question about our services, or just want to know how we're doing?. Drop us a line.
 						</p>
 					</div>
-
 					<!-- CONTACT FORM INPUTS -->
 					<form class="contact-form--body">
 						<!-- NAME -->
@@ -1225,7 +1174,6 @@
 						<div class="contact-form--msg">
 							<textarea type="text" name="message" placeholder="Write message here..." rows="5" required=""></textarea>
 						</div>
-
 						<!-- SEND MSG BTN -->
 						<div class="send-btn">
 							<button class="btn btn-lg" type="submit">send message</button>
@@ -1234,12 +1182,13 @@
 				</section>
 			</div>
 			<!-- ./ container -->
-
 			<!-- FOOTER -->
 			<footer id="footer" class="footer">
 				<div class="container">
 					<div class="footer-body--top">
-						<h3 class="logo">Savory</h3>
+						<a href="#home" class="navbar-brand">
+							<img src="/logo-white.debb5aa7.png" alt="Logo" class="navbar-logo">
+						</a>
 						<ul class="social-links">
 							<li>
 								<a href="#"><i class="fab fa-facebook"></i></a>
@@ -1256,17 +1205,29 @@
 						</ul>
 					</div>
 					<span class="separator"></span>
-
 					<div class="footer-body--bottom">
+						<!-- SUBSCRIBE FOOTER -->
+						<div class="subscribe--footer">
+							<h3>Get Notifications</h3>
+							<p>Stay up-to-date with our free monthly newsletter.</p>
+							<form action="submit" class="subscribe--footer-form">
+								<input type="email" name="email" placeholder="Email Address..." required="">
+								<button type="submit" class="btn btn-lg btn-shadow">subscribe to newsletter</button>
+							</form>
+						</div>
+
 						<div class="about-footer">
+							<!-- ABOUT US FOOTER -->
 							<h3>About Us</h3>
 							<p class="text-justify">
 								In 2003, Savory opened its first location in downtown Toronto. Focussed entirely on serving the perfect
 								food, the tiny take-out restaurant created a sensation in the area winning praise from food critics and
 								numerous people's choice awards.
 							</p>
-							<a href="#" class="footer-link">read more</a>
+							<a href="" class="footer-link">read more</a>
 						</div>
+
+						<!-- CONTACT -->
 						<div class="contact-footer">
 							<h3>Contact Info</h3>
 							<ul class="contact-footer--links">
@@ -1284,18 +1245,9 @@
 								</li>
 							</ul>
 						</div>
-						<div class="gallery-footer">
-							<h3>Gallery</h3>
-							<p>
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aut quam alias praesentium consequuntur,
-								mollitia distinctio dignissimos accusamus omnis ducimus!
-							</p>
-							<a href="#" class="footer-link">read more</a>
-						</div>
 					</div>
-
 					<span class="separator"></span>
-
+					<!-- COPYRIGHT -->
 					<div class="copyright">
 						<p>
 							Built with <i class="fas fa-heart heart"></i> by
@@ -1308,6 +1260,8 @@
 			</footer>
 		</section>
 		<!-- ./ section__container -->
+
+		<!-- / data-scroll-container -->
 	</body>
 
 	<!-- CUSTOM JS -->

@@ -19,7 +19,7 @@ body {
 	background-image: url(../img/bg.jpg);
 	background-size: 100%;
 	background-attachment: fixed;
-	overflow-x: hidden;
+	overflow: hidden;
 	position: relative;
 }
 
@@ -38,6 +38,10 @@ i,
 	transition-property: background-color, opacity, transform, color, border-radius;
 }
 
+.power-deal--title,
+.mobile-app--title,
+.dual-btns,
+.preloader,
 .quote-icon,
 .img-1,
 .img-2,
@@ -205,6 +209,7 @@ h6 {
 	}
 
 	&-logo {
+		max-width: 130px;
 		margin-bottom: 0;
 	}
 }
@@ -308,11 +313,58 @@ h6 {
 
 		&-one {
 			flex-basis: 100%;
+
+			@include media-breakpoint-down(xl) {
+				flex-basis: 65%;
+			}
+
+			@include media-breakpoint-down(lg) {
+				flex-basis: 80%;
+			}
+
+			@include media-breakpoint-down(md) {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	.hero__content--intro-left {
+		@include media-breakpoint-down(lg) {
+			text-align: left;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			text-align: center;
+		}
+	}
+
+	.hero__content {
+		@include media-breakpoint-down(md) {
+			text-align: center;
 		}
 	}
 
 	.hero__content--message {
 		padding-top: 20px;
+
+		@include media-breakpoint-down(lg) {
+			width: 60%;
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.hero__content--btns {
+		@include media-breakpoint-down(md) {
+			justify-content: center;
+		}
 	}
 
 	.img-1 {
@@ -377,6 +429,11 @@ h6 {
 	z-index: 8;
 	background-image: $hero-gradient;
 	opacity: 0.8;
+
+	@include media-breakpoint-down(lg) {
+		background-image: $bg-overlay;
+		opacity: 1;
+	}
 }
 
 .hero__content {
@@ -389,6 +446,22 @@ h6 {
 		opacity: 0.95;
 		font-size: 12vmin;
 		// font-size: 5.5rem;
+
+		@include media-breakpoint-down(xl) {
+			font-size: 5rem;
+		}
+
+		@include media-breakpoint-down(lg) {
+			font-size: 4.2rem;
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: 4rem;
+		}
+
+		@media screen and (max-width: 458px) {
+			font-size: 3rem;
+		}
 	}
 
 	&--message {
@@ -401,7 +474,6 @@ h6 {
 		margin-top: 36px;
 		display: flex;
 		gap: 20px;
-		// width: max-content;
 	}
 
 	&--intro-left {
@@ -428,6 +500,12 @@ h6 {
 			margin: 0;
 			background-color: $clr-primary;
 			border-radius: 100px;
+
+			@include media-breakpoint-down(lg) {
+				top: -60%;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 	}
 }
@@ -438,6 +516,10 @@ h6 {
 	margin-top: 45px;
 	gap: 60px;
 	align-items: center;
+
+	@include media-breakpoint-down(md) {
+		justify-content: center;
+	}
 
 	&--dots {
 		display: flex;
@@ -1060,10 +1142,10 @@ h6 {
 		z-index: 8;
 		top: 85px;
 
-		img {
+		.mobile-app-img {
 			max-width: 400px;
 			object-fit: cover;
-			transform: translate(20%, -8%);
+			transform: translate(10%, -8%);
 
 			@include media-breakpoint-down(md) {
 				max-width: 300px;
@@ -1087,6 +1169,10 @@ h6 {
 			@include media-breakpoint-down(md) {
 				max-width: 350px;
 				transform: translate(0%, -25%);
+			}
+
+			@supports (filter: contrast()) {
+				filter: contrast(-20%);
 			}
 		}
 	}
@@ -1851,6 +1937,10 @@ h6 {
 	color: #fff;
 	transform: translateY(25%);
 
+	@include media-breakpoint-down(lg) {
+		transform: translateY(13%);
+	}
+
 	&-body--top {
 		display: flex;
 		justify-content: space-between;
@@ -1871,17 +1961,13 @@ h6 {
 		}
 	}
 
-	.logo {
-		margin-left: 0;
-	}
-
 	.separator {
 		border-top: 1px dashed #fff;
 	}
 
 	.footer-body--bottom {
 		display: flex;
-		gap: 45px;
+		gap: 55px;
 
 		> * {
 			flex-basis: 100%;
@@ -1935,8 +2021,6 @@ h6 {
 }
 
 .contact-footer {
-	// display: flex;
-	// flex-direction: row;
 	flex-basis: 100%;
 
 	&--links {
@@ -1961,6 +2045,75 @@ h6 {
 	}
 }
 
+.subscribe--footer-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	button {
+		justify-self: center;
+
+		text-align: center;
+	}
+}
+
 .heart {
 	animation: pulse 800ms infinite alternate-reverse;
+}
+
+// PRELOADER
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: 100vh;
+	width: 100vw;
+	z-index: 999999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/bg.jpg);
+	background-size: 80%;
+	overflow: hidden;
+}
+
+.preloader-gif {
+	position: relative;
+	z-index: inherit;
+	height: 50px;
+	width: 50px;
+	border: 4px solid $clr-article;
+	border-top: 4px solid transparent;
+	border-radius: 50%;
+	background-color: transparent;
+
+	transform: translateY(-100vh);
+	animation: rotate-clockwise 1s linear infinite normal;
+}
+
+.preloader-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: $bg-overlay;
+}
+
+.preloader-gif-inner {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: inherit;
+	height: 20px;
+	width: 20px;
+
+	border: 4px solid $clr-article;
+	border-top: 4px solid transparent;
+	border-radius: 50%;
+	background-color: transparent;
+
+	animation: rotate-anticlockwise 900ms linear infinite normal;
 }
