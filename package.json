@@ -3,10 +3,9 @@
 	"version": "1.0.0",
 	"description": "A healthy and eco-friendly resturant for the entire family",
 	"main": "index.html",
-	"homepage": ".",
 	"scripts": {
 		"start": "parcel index.html",
-		"build": "parcel build index.html --dist-dir ./build"
+		"build": "parcel build index.html --out-dir ./dist --public-url ./"
 	},
 	"keywords": [],
 	"author": "Shamar Morrison",
@@ -16,11 +15,16 @@
 		"not dead"
 	],
 	"devDependencies": {
+		"autoprefixer": "^9.0.0",
 		"fslightbox": "^3.2.3",
-		"sass": "^1.32.12"
+		"postcss-modules": "^4.0.0",
+		"postcss-uncss": "^0.17.0",
+		"sass": "^1.32.12",
+		"uncss": "^0.17.3"
 	},
 	"dependencies": {
 		"bootstrap": "^5.0.0",
+		"parcel-bundler": "^1.12.5",
 		"swiper": "^6.6.1"
 	}
 }
