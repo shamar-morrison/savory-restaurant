@@ -1507,11 +1507,11 @@ h6 {
 	color: $clr-primary;
 
 	@include media-breakpoint-down(xl) {
-		top: -22%;
+		top: -20%;
 	}
 
 	@include media-breakpoint-down(lg) {
-		top: -30%;
+		top: -27%;
 		right: 5%;
 	}
 
@@ -1519,8 +1519,9 @@ h6 {
 		top: -25%;
 	}
 
-	@media screen and (max-width: 370px) {
-		top: -22%;
+	@include media-breakpoint-down(sm) {
+		top: -20%;
+		font-size: 12rem;
 	}
 }
 
