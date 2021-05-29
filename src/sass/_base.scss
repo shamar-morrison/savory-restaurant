@@ -84,14 +84,16 @@ a {
 	color: inherit;
 	text-decoration: none;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: inherit;
 	}
 
 	&.btn,
 	&.btn-lg,
 	&.btn-shadow {
-		&:hover {
+		&:hover,
+		&:focus {
 			color: #fff;
 		}
 	}
@@ -262,7 +264,8 @@ h6 {
 		position: relative;
 		// padding: 15px 25px;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $text-clr-primary !important;
 
 			&::after {
@@ -861,7 +864,8 @@ h6 {
 			max-height: 800px;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			img {
 				transform: scale(1.05) translateY(-50px);
 
@@ -1323,6 +1327,15 @@ h6 {
 				width: 100%;
 				resize: none;
 			}
+
+			input,
+			textarea,
+			select {
+				&:focus,
+				&:active {
+					outline: 1px solid $clr-primary;
+				}
+			}
 		}
 
 		.msg-wrapper {
@@ -1404,25 +1417,30 @@ h6 {
 		@media screen and (max-width: 482px) {
 			gap: 20px;
 		}
+
+		> *:nth-child(3) {
+			flex-basis: 15%;
+		}
 	}
 }
 
 .food__item--img {
-	width: 120px;
+	max-width: 120px;
 	border-radius: $border-radius-sm;
 	overflow: hidden;
 	box-shadow: $card-shadow;
 
-	// max-width: 992px
+	// max-width: 992px (xl)
 	@include media-breakpoint-down(xl) {
-		width: 200px;
+		min-width: 120px;
 	}
 
 	@media screen and (max-width: 482px) {
 		display: none;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		img {
 			transform: scale(1.05);
 		}
@@ -1454,6 +1472,7 @@ h6 {
 
 .food__item--price {
 	.food-price {
+		text-align: right;
 		font-weight: 600;
 		font-size: 1.3rem;
 	}
@@ -1626,7 +1645,8 @@ h6 {
 }
 
 .hover-white {
-	&:hover {
+	&:hover,
+	&:focus {
 		color: #fff;
 	}
 }
@@ -1742,7 +1762,8 @@ h6 {
 		margin-bottom: 35px;
 		border-radius: $border-radius-sm $border-radius-sm 0 0;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			img {
 				transform: scale(1.05);
 			}
@@ -1901,6 +1922,11 @@ h6 {
 		input,
 		textarea {
 			flex-basis: 100%;
+
+			&:focus,
+			&:active {
+				outline: 1px solid $clr-primary;
+			}
 		}
 
 		.send-btn {
@@ -1955,7 +1981,8 @@ h6 {
 			margin-bottom: 0;
 
 			a {
-				&:hover {
+				&:hover,
+				&:focus {
 					color: $clr-primary;
 				}
 			}
