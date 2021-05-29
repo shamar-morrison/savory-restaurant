@@ -573,8 +573,8 @@ const animSec = (event, elOne, elTwo) => {
 	animateIn(elTwo);
 };
 
-const mobileAppSecObs = new IntersectionObserver(event => animSec(event, mobileAppBtns, mobileAppTitle), { threshold: 0.5 });
+const mobileAppSecObs = new IntersectionObserver(event => animSec(event, mobileAppBtns, mobileAppTitle), { threshold: 0.2 });
 mobileAppSecObs.observe(mobileAppSec);
 
-const powerDealSecObs = new IntersectionObserver(event => animSec(event, powerDealBtns, powerDealTitle), { threshold: 0.5 });
+const powerDealSecObs = new IntersectionObserver(event => animSec(event, powerDealBtns, powerDealTitle), { threshold: 0.2 });
 powerDealSecObs.observe(powerDealSec);

@@ -12802,13 +12802,13 @@ var animSec = function animSec(event, elOne, elTwo) {
 var mobileAppSecObs = new IntersectionObserver(function (event) {
   return animSec(event, mobileAppBtns, mobileAppTitle);
 }, {
-  threshold: 0.5
+  threshold: 0.2
 });
 mobileAppSecObs.observe(mobileAppSec);
 var powerDealSecObs = new IntersectionObserver(function (event) {
   return animSec(event, powerDealBtns, powerDealTitle);
 }, {
-  threshold: 0.5
+  threshold: 0.2
 });
 powerDealSecObs.observe(powerDealSec);
 },{"swiper/bundle":"node_modules/swiper/swiper-bundle.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css","../../node_modules/fslightbox/index":"node_modules/fslightbox/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -12839,7 +12839,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49908" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55658" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
